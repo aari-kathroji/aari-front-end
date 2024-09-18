@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+.home-body{
+    /* border: 1px solid black; */
+    height: 44.3vw;
+    background-image: url('../Images/orange-stripe-lines-flip.jpg');
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    background-position-y: -14vw;
+    /* background: linear-gradient(to right, rgb(252, 74, 26), rgb(247, 183, 51)); */
+}
+.for-login{
+    padding: 4vw 0vw 0vw 4vw;
+}
+.for-title{
+    width: 60%;
+    /* border: 1px solid black; */
+}
+
+.name{
+    /* border: 1px solid black; */
+    height: 11vw;
+    padding: 1.6vw 5vw 0vw 5vw;
+    font-size: 8vw;
+    font-family: 'Ubuntu';
+    font-weight: 600;
+    color: rgb(162, 74, 2);
+}
+
+
+.sub-name{
+    /* border: 1px solid black; */
+    padding-left: 5vw;
+    font-size: 2.5vw;
+    color: rgb(107, 28, 4);
+    text-shadow: 0.1vw 0.1vw 0.1vw rgb(241, 113, 33);
+}
+
+.schedule{
+    /* border: 1px solid black; */
+    margin-top: 1vw;
+    padding: 0vw 4vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.sch{
+    /* border: 1px solid black; */
+    width: 30vw;
+    border-radius: 2.5vw;
+    height: 5vw;
+    color: white;
+    background-color: rgb(254, 89, 0);
+    box-shadow: 0.1vw 0.1vw 0.5vw rgb(219, 93, 3);
+    margin-bottom: 2vw;
+    transition: all 0.2s ease 0.2s;
+}
+
+.view{
+    background-color: brown;
+}
+
+.sch:hover{
+    transform: scale(1.02);
+    box-shadow: 0.1vw 0.1vw 0.5vw red;
+}
+
+.para{
+    font-family: 'kanit';
+    /* border: 1px solid black; */
+    padding-left: 5vw;
+    font-size: 2.3vw;
+    color: rgb(148, 67, 0);
+    text-shadow: 0.1vw 0.1vw 0.2vw white;
+}
+
+
+.for-faq{
+    margin: 1vw 0vw 0vw 5vw;
+    display: flex;
+    /* border: 1px solid black; */
+    justify-content: center;
+    align-items: center;
+    background-color: orangered;
+    padding: 1vw 1vw 1vw 2vw;
+    color: white;
+    font-weight: 600;
+    font-family: 'Ubuntu';
+    box-shadow: 0.1vw 0.1vw 0.5vw orange;
+    transition: all 0.3s ease 0.1s;
+    width: 40vw;
+}
+
+
+.for-faq:hover{
+    transform: scale(1.02);
+    box-shadow: 0.1vw 0.1vw 0.5vw red;
+}
+.faq{
+    margin-left: 2vw;
+    border-radius: 0vw;
+    text-align: center;
+}
+
+.post{
+    /* border: 1px solid black; */
+    border-radius: 0vw;
+    color: white;
+    background-color: orange;
+    margin-left: 1vw;
+}
+

@@ -1,0 +1,149 @@
+.home{
+    background: linear-gradient(135deg, rgb(252, 207, 49) 10%, rgb(245, 85, 85) 100%);
+    height:50vw;
+    overflow-x: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding:2vw;
+}
+.home1{
+    /* border:0.2vw solid black; */
+    background-color: white;
+    height:30vw;
+    width:55vw;
+    margin: 2.4vw 0vw 0vw 22vw;
+    border-radius: 2vw;
+    display: flex;
+
+}
+.img{
+    height: 26vw;
+    width: 22vw;
+    /* border:0.2vw solid black; */
+    border-radius: 1vw 1vw 1vw 1vw;
+    margin: 2vw 0vw 0vw 2.5vw;
+    background-image: url("../Images/contact_us.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.contact{
+    height: 26vw;
+    width: 27vw;
+    /* border:0.2vw solid black; */
+    margin:0.7vw 0vw 0vw 2vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.name{
+    /* border:0.1vw solid black; */
+    border-radius: 2vw;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 15vw;
+    padding: 1vw;
+    justify-content: space-between;
+}
+#Sname{
+    height: 3vw ;
+    border-radius: 1vw;
+    border: 0.1vw solid black;
+    padding-left: 1vw;
+    font-size: medium;   
+}
+#email{
+    height: 3vw ;
+    border-radius: 1vw;
+    border: 0.1vw solid black;
+    padding-left: 1vw;
+    font-size: medium; 
+}
+#message{
+    height: 6vw ;
+    border-radius: 1vw;
+    border: 0.1vw solid black;
+    padding-left: 1vw;
+    font-size: medium;
+    overflow-y: hidden;
+}
+.send{
+    width:9.6vw;
+    /* border:0.1vw solid black; */
+    border-radius: 0.5vw;
+    margin-top: 1.5vw;
+    margin-left: 7vw;
+    text-align: center;
+    background-size: contain;
+    flex-wrap: wrap;
+}
+
+.for-contact-card{
+    height: 10vw;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 3vw 0vw 0vw 20vw;
+    width: 60vw;
+    padding: 1.5vw;
+    border-radius: 2vw;
+    background-color: white;
+}
+.mail{
+    height:7vw;
+    width:7vw;
+    /* border:0.1vw solid black; */
+    padding: 1vw;
+    background-image: url("../Images/Gmail.png");
+    background-repeat: no-repeat;
+    background-size: 9vw;
+    background-position-x: -1vw;
+    background-position-y: 0.7vw;
+}
+.call{
+    height:7vw;
+    width:7vw;
+    /* border:0.1vw solid black; */
+    background-image: url("../Images/phone.webp");
+    background-repeat: no-repeat;
+    background-size: 5.2vw;
+    background-position-x: 0.7vw;
+    background-position-y: 0.7vw;
+}
+.whatsapp{
+    height:7vw;
+    width:7vw;
+    /* border:0.1vw solid black; */
+    background-image: url("../Images/whatsapp.png");
+    background-repeat: no-repeat;
+    background-size: 5.4vw;
+    background-position-x: 0.7vw;
+    background-position-y: 0.5vw;
+}
+.insta{
+    height:7vw;
+    width:7vw;
+    /* border:0.1vw solid black; */
+    background-image: url("../Images/insta.avif");
+    background-repeat: no-repeat;
+    background-size: 7vw;
+    background-position-x: -0.1vw;
+    background-position-y: -0.1vw;
+}
+.twitter{
+    height:7vw;
+    width:7vw;
+    /* border:0.1vw solid black; */
+    background-image: url("../Images/twitter.png");
+    background-repeat: no-repeat;
+    background-size: 5vw;
+    background-position-x: 1vw;
+    background-position-y: 1vw;
+}
+

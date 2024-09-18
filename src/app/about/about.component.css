@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap'); 
+
+
+.for-name {
+    font-size: 6vw;
+    color: orange;
+    margin-left: 4vw;
+    margin-top: 4.4vw;
+    width: 50vw;
+    font-family: Protest Riot;
+    position: absolute; 
+    
+}
+
+.for-aari {
+    /* border: 1px solid black; */
+    height: 50vw;
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.for-image {
+     height: 48vw;
+     width: 98.5vw;
+     background-image: url('../Images/instituteimage.jpg'); 
+     background-repeat: no-repeat;
+     background-size: 100vw;
+     /* margin-top: 2vw;   */
+     overflow-x: hidden;
+     position: absolute;
+}
+.for-bio {
+    margin-top: 14vw; 
+    margin-left: 4vw;
+    color: lightcoral;
+    font-family: Oswald;
+    font-weight: 700;
+    font-size: 2vw;
+    filter: opacity(2);
+    overflow-x: hidden;
+    width: 70vw; 
+}
+.for-aari2 {
+    /* border: 1px solid black; */
+    height: 36vw;
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.for-mission {
+    color: orange;
+    margin-top: 1vw;
+    font-size: 3.7vw;
+    margin-left: 4vw;
+    font-family: Protest Guerrilla;
+    overflow-x: hidden;
+    /* width: 50vw; */
+}
+.for-info {
+    margin-top: 2vw;
+    margin-left: 4vw;
+    color: orangered;
+    font-size: 1.5vw;
+    font-weight: 600;
+    overflow-x: hidden;
+    width: 50vw;
+}
+.ourvision-image {
+    background-image: url('../Images/ourvision.png');
+    background-repeat: no-repeat;
+    height: 100vw;
+     width: 40vw;
+    margin-left: 2vw;
+    /* margin-top: -28vw; */
+    background-size: 50vw;
+}
+
+.for-aari3 {
+    /* border: 1px solid black; */
+    height: 46vw;
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background: radial-gradient(circle at 10% 20%, rgb(255, 229, 168) 0%, rgb(251, 174, 222) 100.7%);
+    margin-top: 1vw;
+    border-radius: 1.6vw;
+}
+
+.for-empower {
+    font-size: 3.7vw;
+    margin-top: 1vw; 
+    margin-left: 4vw; 
+    color:crimson;
+
+}
+.empowerbio {
+    /* margin-top: -26vw; */
+    margin-left: 4vw;
+    font-size: 1.5vw;
+    font-family: cursive;
+    color: blue;
+    width: 40vw;
+    margin-top: 1.6vw;
+}
+.empowerinfo-box {
+    /* background-color: white; */
+    height: 32vw;
+    width: 52vw;
+    /* border: 1px solid black; */
+    border-radius: 2vw;
+    margin-left: 0.5vw;
+    margin-top: 2vw;
+    padding-left: 2vw ;
+    padding-top: 3.6vw;
+    font-size: 1.8vw;
+    box-shadow: 0 0 1.8vw black;
+    background-image: url('../Images/backgroundtheme.jpg');
+    color: red;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+} 
+.for-aari4 {
+    height: 8vw;
+    width: auto;
+    /* border: 1px solid black; */
+    /* display: flex;
+    flex-wrap: wrap;
+    flex-direction: column; */
+}
+.for-text{
+    margin-top: 2vw;
+    font-size: 3.5vw;
+    height: 6vw;
+    width: 98.5vw;
+    /* border: 1px solid white;  */
+    border-radius: 2vw;
+    background-color: rgba(255, 166, 0, 0.562);
+    color: rgb(255, 0, 0);
+    font-family:fantasy;
+}
+.for-aari5 {
+    height: 20vw;
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    /* border: 1px solid black; */
+    justify-content: center;
+    background-color: rgb(227, 168, 105);
+}
+.for-success {
+    font-size: 2.5vw;
+    color: rgb(99, 26, 0);
+    /* border: 1px solid black; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 4vw;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(214, 131, 112);
+}
+
+.for-success-img{
+    /* border: 1px solid red; */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.success-image1 {
+    height: 10vw;
+    width: 10vw;
+    border: 0.2vw solid black;
+    border-radius: 5vw; 
+    background-image: url('../Images/image1.jpeg');
+    background-size:15vw;
+    background-position-x:center;
+    margin-top: 1vw;
+}
+.success-text{
+    /* border: 1px solid black; */
+    /* margin-top: 2vw;
+    margin-left: 6vw; */
+    font-size: 1.5vw;
+    font-family:cursive;
+    color: rgb(103, 14, 0);
+    height:auto;
+    width: 100%;
+    text-align: center;
+}
+.success-image2 {
+    height: 10vw;
+    width: 10vw;
+    border: 0.2vw solid black;
+    border-radius: 5vw;
+    background-image: url('../Images/image2.jpeg');
+    background-size:15vw;
+    background-position-x:center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1vw;
+}

@@ -1,0 +1,23 @@
+<form class="form"  [formGroup]="newBatchForm" (ngSubmit)="saveBatch()">
+    <input type="hidden" title="for-form" formControlName="id">
+    <label for="" class="form-label">Batch Name :</label>
+    <input type="text" title="for-form" name="" id="" class="form-control" placeholder="Enter Batch Name" formControlName="batchName">
+    <div class="radios">
+    <label for="" class="form-label">Batch Status :</label>
+    <input type="radio" name="batchStatus" [value]="1" id="" class="form-check-input" title="radio" formControlName="batchStatus"> Initial 
+    <input type="radio" name="batchStatus" [value]="2" id="" class="form-check-input" title="radio" formControlName="batchStatus"> Running 
+    <input type="radio" name="batchStatus" [value]="3" id="" class="form-check-input" title="radio" formControlName="batchStatus"> Completed 
+    </div>
+    <div class="radios">
+    <label for="" class="form-label">Course Name :</label>
+    <input type="radio" name="courseName" [value]="1" id="" class="form-check-input" title="course" formControlName="courseName"> Course A 
+    <input type="radio" name="courseName" [value]="2" id="" class="form-check-input" title="course" formControlName="courseName"> Course B 
+    <input type="radio" name="courseName" [value]="3" id="" class="form-check-input" title="course" formControlName="courseName"> Course C 
+    </div>
+
+    <div class="fro-btns" style="width: 100%; margin-top: 2vw;">
+        <button class="btn btn-success s" type="submit">{{edit ? 'Update' : 'Save'}}</button>
+        <button class="btn btn-warning s" (click)="clearForm()">Clear</button>
+    </div>
+
+</form>

@@ -1,0 +1,43 @@
+<div class="for-login">
+    <form class="form-login" [formGroup]="login">
+        <div class="label form-label">LOGIN HERE</div>
+            <div class="user form-label">User name</div>
+            <input type="text" name=""  title="user" placeholder="Enter user name" [id]='"userNameInput"' class="form-control user-name" formControlName="userName">
+
+                <div class="fiel" *ngIf="login.controls['userName'].invalid && (login.controls['userName'].touched || isFormSubmmited || login.controls['userName'].dirty)">
+                    <span class="field" *ngIf="login.controls['userName'].errors?.['required']">**This field is required</span>
+                    <span class="field" *ngIf="login.controls['userName'].errors?.['minlength']">**minimum 5 characters </span>
+                </div>
+
+
+            <div class="pass user form-label">Password</div>
+            <input type="password" name=""  title="pass" placeholder="Enter password" [id]='"passwordInput"' class="form-control user-name" formControlName="password">
+
+                
+            <div class="fiel" *ngIf="login.controls['password'].invalid && (login.controls['password'].touched || isFormSubmmited || login.controls['password'].dirty)">
+                <span class="field" *ngIf="login.controls['password'].errors?.['required']">**This field is required</span>
+                <span class="field" *ngIf="login.controls['password'].errors?.['minlength']">**Must have atleast 6 charcters</span>
+                <span class="field" *ngIf="login.controls['password'].errors?.['InvalidPassword']">**Remove any spaces or special characters</span>
+            </div>
+    
+
+            <button class="btn login" (click)="onSubmit()">Login
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-arrow-right" viewBox="0 0 16 18.5">
+                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                  </svg>
+            </button>
+            
+
+            <div class="forgot">
+                forgot password ?
+            </div>
+    </form>
+</div>
+
+<div class="for-register">
+    <button class="btn reg">Register Now
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-arrow-right" viewBox="0 0 16 18.5">
+            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+          </svg>
+    </button>
+</div>

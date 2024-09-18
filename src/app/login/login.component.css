@@ -1,0 +1,104 @@
+.form-login{
+    padding: 1.5vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border-radius: 2vw;
+    /* border: 1px solid black; */
+    /* height: 35vw; */
+    width: 25vw;
+    background-image: url('../Images/o-tech.jpg');
+    background-size: 60vw;
+    /* background-position-y: -2vw ; */
+    background-repeat:no-repeat ;
+    box-shadow: 0.1vw 0.1vw 0.5vw orangered;
+    /* background-color: white; */
+    transition: all 0.2s ease 0.1s;
+}
+.form-login:hover{
+    transform: scale(1.03);
+}
+.label{
+    /* border: 1px solid black; */
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: 'Ubuntu';
+    text-decoration: underline;
+    font-size: 2vw;
+}
+
+.user{
+    padding: 1vw 0vw 0.2vw 1vw;
+    font-family: 'Kanit';
+    color: rgb(255, 255, 255);
+}
+
+.user-name{
+    border-radius: 2vw;
+    padding-left: 1vw;
+}
+
+.login{
+    /* border: 1px solid black; */
+    margin-top: 2vw;
+    border-radius: 2vw;
+    background-color: rgb(96, 37, 5);
+    color: white;
+    transition: all 0.2s ease 0.1s;
+}
+
+.login:hover{
+    background-color: rgb(210, 22, 22);
+    box-shadow: 0.1vw 0.1vw 0.5vw orangered;
+    transform: scale(1.01);
+}
+
+.for-register{
+    /* border: 1px solid black; */
+    display: flex;
+    box-shadow: 0.1vw 0.1vw 0.1vw orangered;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1vw;
+    border-radius: 0.5vw;
+    transition: all 0.2s ease 0.1s;
+    background-color: rgb(199, 107, 2);
+}
+
+.for-register:hover{
+    background-color: brown;
+    transform: scale(1.1);
+}
+.reg{
+    color: white;
+    width: 100%;
+    border-radius: 0.5vw;
+}
+
+.forgot{
+    /* border: 1px solid black; */
+    text-decoration: underline;
+    font-size: 1vw;
+    text-align: center;
+    color: rgb(168, 43, 8);
+    text-shadow: 0.1vw 0.1vw 0.1vw white;
+    font-weight: 600;
+}
+
+.forgot:hover{
+    color: rgb(0, 0, 0);
+}
+
+.field{
+    color: rgb(255, 255, 255);
+    font-size: 1vw;
+    margin-top: 0vw;
+    padding-top: 0vw;
+    padding-right: 1vw;
+}
+
+.fiel{
+    display: flex;
+    align-items: flex-end;
+    justify-content: right;
+}

@@ -1,0 +1,77 @@
+
+.batch-body{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+table{
+
+    margin-top: 3vw;
+    width: 70vw;
+    text-align: center;
+    border: 1px solid grey;
+    background-color: rgb(217, 217, 217);
+
+}
+
+tr, td, th {
+    border: 1px solid grey;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* border: 1px solid black; */
+    width: 70vw;
+    padding: 0.5vw;
+    background-color: antiquewhite;
+}
+
+.form-label{
+    margin-top: 1vw;
+    margin-left: 1vw;
+}
+
+
+.date-label{
+    width: 100%;
+}
+
+.s{
+    width: 26.3vw;
+}
+
+.edit{
+    border-radius: 1vw;
+    background-color: rgb(255, 213, 0);
+    height: 3vw;
+}
+
+.danger{
+    border-radius: 1vw;
+    background-color: rgb(255, 0, 0);
+}
+
+.radios{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 1vw;
+    align-items: center;
+}
+
+.radios>.form-label{
+    color: darkblue;
+}
+
+p{
+    padding-top: 0.7vw;
+}
+
+.btn{
+    color: white;
+}

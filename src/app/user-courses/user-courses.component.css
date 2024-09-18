@@ -1,0 +1,39 @@
+.fun{
+    height: 34vw;
+    width: 39vw;
+    background-image: url('../Images/programing-Fundamentals.drawio.png');
+
+
+}
+.java{
+    height: 37vw;
+    width: 55vw;
+    background-image: url('../Images/Java\ Concepts.drawio.png');
+}
+.mongoDB{
+    height: 37vw;
+
+    width: 58vw;
+    background-image: url('../Images/MongoDB.drawio.png');
+}
+
+.mysql{
+    height: 44vw;
+    width: 54vw;
+    background-image: url('../Images/MySQL.drawio.png');
+    justify-content: center;
+
+
+}
+.api{
+    height: 176vw;
+    width: 99vw;
+    background-image: url('../Images/API.drawio.png');
+    background-repeat: no-repeat;
+}
+.ang{
+    height: 60vw;
+    width: 100vw;
+    background-image: url('../Images/Angular.drawio.png');
+    background-repeat: no-repeat;
+}

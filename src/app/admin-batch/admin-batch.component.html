@@ -1,0 +1,30 @@
+<div class="batch-body">
+<div class="add">
+    <button class="btn btn-primary" (click)="addBatch()">Add Batches</button>
+</div>
+        
+
+    <div class="for-table">
+        <table class="table" border="1">
+            <tr>
+                <th>Batch Id</th>
+                <th>Batch Name</th>
+                <th>Batch Status</th>
+                <th>Course Name</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            <tr *ngFor="let batch of singleBatch">
+                <td>{{batch.id}}</td>
+                <td>{{batch.batch_name}}</td>
+                <td>{{getBatchStatusName(batch.batch_status_id)}}</td>
+                <td>{{getCourseName(batch.course_id)}}</td>
+                <td><button class="edit btn btn-warning" (click)="editBatch(batch)" >Edit</button></td>
+                <td><button class="danger btn btn-danger" (click)="deleteBatch(batch.id)" >Delete</button></td>
+            </tr>
+    </table>
+    </div>
+    
+
+</div>
+

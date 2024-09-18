@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Protest+Revolution&family=Protest+Riot&display=swap');
+
+.outer_curve{
+    display: flex;
+    background-image: url(../Images/staff\ bg.svg);
+    background-size: cover;
+    /* height: 900px;
+    width: 1440px;    */
+    /* background-color: #0b617b7e; */
+}
+.out_holder{
+    width: 80vw;
+    height: 40vw;
+    margin: 10vw 0vw 15vw 15vw;
+}
+
+.vol{
+    display: flex;
+}
+
+.vol_up{
+    width: 5vw;
+    height: 0.4vw;
+    background-color: black;
+    margin-left: 12vw;
+    border-radius: 3vw;
+}
+
+.vol_down{
+    width: 5vw;
+    height: 0.4vw;
+    background-color: black;
+    border-radius: 3vw;
+    margin-left: 1vw;
+}
+
+.outer_body{
+    width: 75vw;
+    height: 42vw;
+    background-color: rgb(0, 0, 0);
+    border-radius: 4vw;
+    border: 0.4vw solid #b1b1b1;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.power{
+    height: 4vw;
+    width: 1vw;
+    background-color: black;
+    margin: 0vw;
+}
+
+.tab{
+    height: 38vw;
+    width: 70vw;
+    background-color: white;
+    border-radius: 2vw;  
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.cam{
+    height: 1vw;
+    width: 1vw;
+    border-radius: 50%;
+    background-color: rgb(164, 164, 164);
+    margin: 0.5vw;
+    margin-right: 0.7vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mcam{
+    height: 0.4vw;
+    width: 0.5vw;
+    border-radius: 5vw;
+    background-color: black;
+}
+
+.dupli{
+    height: 28vw;
+    width: 70vw;
+    /* animation: caro 15s infinite; */
+    /* animation-timing-function: initial; */
+    animation-timeline: 1s;
+}
+
+.tab_content{
+    height: 28vw;
+    width: 70vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.staff_cont_1{
+    height: 27vw;
+    width: 21vw;
+    border-radius: 2vw;
+    /* background-color: rgb(81, 50, 107);  */
+    background-color: rgba(140, 0, 255, 0.546);
+    /* background-color: rgb(50, 4, 125); */
+    box-shadow: 0vw 0vw 1vw 0vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.staff_img1{
+    height: 9vw;
+    width: 9vw;
+    border-radius: 50%;
+    background-color: white;
+    margin-top: 1vw;
+    background-image: url(../Images/human_face.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.staff_data_container{
+    height: 15vw;
+    width: 19vw;
+    background-color: white;
+    margin-top: 1vw;
+    border: 1px solid rgba(88, 88, 88, 0.222);
+    border-radius: 0.5vw;
+   
+}
+
+.staff_img2{
+    height: 9vw;
+    width: 9vw;
+    border-radius: 50%;
+    background-color: white;
+    margin-top: 1vw;
+    background-image: url(../Images/female.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.staff_img3{
+    height: 9vw;
+    width: 9vw;
+    border-radius: 50%;
+    background-color: white;
+    margin-top: 1vw;
+    background-image: url(../Images/men.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.staff_name1{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: rgb(213, 151, 162);
+    margin-top: 5px;
+}
+
+.staff_name_container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1vw;
+}
+
+.staff_name_holder{
+    height: 2vw;
+    width: 15vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1vw;
+    border-radius: 1vw;
+    border: 2px solid rgba(215, 97, 0, 0.903);
+    /* box-shadow: 7px 5px 21px 1px; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+hr{
+    border: 1px solid rgb(0, 0, 0);
+    margin:0vw
+}
+
+.info_box{
+    width: 19vw;
+    height: 10.6vw;
+}
+
+.dup1{
+    margin: 0px 5px 0px 12px;
+    color: black;
+}
+
+.profession_container{
+    height: 3vw;
+    width: 19vw;
+    display: flex;
+}
+
+.prof{
+    height: 3vw;
+    width: 7vw;
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    color: rgb(213, 151, 162);
+    font-weight: 700;
+    margin-left: 0.3vw;
+    font-weight: 700;
+}
+
+.experince_container{
+    height: 3vw;
+    width: 12vw;
+    display: flex;
+    align-items: center;
+    font-size: 0.9em;
+    font-stretch: extra-expanded;
+    font-weight: 700;
+    line-height: 2em;
+}
+
+.exp_soc{
+    height: 4vw;
+    width: 18vw;
+    display: flex;
+    margin-left: 0.5vw;
+}
+
+.exp_cont{
+    height: 4vw;
+    width: 11vw;
+    display: flex;
+}
+
+.experience{
+    height: 4vw;
+    width: 7vw;
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    color: rgb(213, 151, 162);
+    font-weight: 600;
+}
+
+.exp_num{
+    height: 4vw;
+    width: 4vw;
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    font-weight: 450;
+}
+
+.dup2{
+    margin: 0px 5px 0px 11px;
+    color: black;
+}
+
+.vl{
+    height: 4vw;
+    border: 1px solid rgba(0, 0, 0, 0.417);
+    margin-left: 0.3vw;
+}
+
+.social_media{
+    height: 4vw;
+    width: 7vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 0.1vw;
+}
+
+.mail_icon{
+    font-size: 1.5em;
+}
+
+.linkedin_icon{
+    font-size: 1.5em;
+}
+
+.insta_icon{
+    font-size: 1.5em;
+}
+
+.whatsapp_icon{
+    font-size: 1.5em;
+}
+
+.know_more{
+    width: 18vw;
+    height: 3.4vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.know_more_btn{
+    height: 2vw;
+    width: 10vw;
+    font-weight: 700;
+    font-size: 1.3em;
+    background-color: #01202b;
+    color: #fff;
+    border: 0px;
+    border-radius: 30px;
+    padding-bottom: 30px;
+}
+
+@keyframes caro {
+    0%{
+        transform: translateX(0%);
+    }
+    25%{
+        transform: translateX(0%);
+    }
+    50%{
+        transform: translateX(-100%);
+    }
+    75%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+    
+}
