@@ -11,4 +11,12 @@ import { LoginComponent } from '../login/login.component';
 })
 export class HomeComponent {
 
+  constructor() { }
+
+  ngOnInit(): void {
+    if(localStorage.getItem('user') && localStorage.getItem('user') !== ''){
+      document.querySelector('.for-login')?.classList.add('hidden');
+    }
+  }
+
 }

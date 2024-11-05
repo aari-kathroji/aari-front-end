@@ -1,0 +1,31 @@
+.points-1{
+    display: none;
+}
+.points-1.show{
+    display: block;
+}
+.points-2{
+    display: none;
+}
+.points-2.show{
+    display: block;
+}
+.points-3{
+    display: none;
+}
+.points-3.show{
+    display: block;
+}
+.onit:hover{
+    cursor: pointer;
+}
+.onit:hover + .onit-ul {
+    display: block;
+    transition: all 0.5s ease 0.1s;
+}
+.onit-ul{
+    display: none;
+}
+.onit-ul.show{
+    display: block;
+}

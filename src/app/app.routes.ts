@@ -6,6 +6,7 @@ import { BatchComponent } from './batch/batch.component';
 import { StaffComponent } from './staff/staff.component';
 import { CourseComponent } from './course/course.component';
 import { AdminstaffComponent } from './adminstaff/adminstaff.component';
+import { RegisterComponent } from './register/register.component';
 
 export const routes: Routes = [
     {
@@ -34,6 +35,9 @@ export const routes: Routes = [
     },
     {
         path : 'adminStaff', component : AdminstaffComponent
+    },
+    {
+        path : 'register', component : RegisterComponent
     }
 
 ];

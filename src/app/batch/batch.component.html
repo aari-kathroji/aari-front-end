@@ -1,4 +1,102 @@
-<p>batches works!</p>
-
-{{singleBatch.id}}
-{{singleBatch.batch_name}}
+<div>
+    <form (ngSubmit)="getBatch(batch.value)">
+        <h3>Select Batch</h3>
+        <select class="form-select" aria-label="Default select example" #batch>
+            <option value="" selected>Select Batch</option>
+            <option value="1">Batch 1</option>
+            <option value="2">Batch 2</option>
+            <option value="3">Batch 3</option>
+        </select>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <div class="points-1">
+        <ul>
+            <li class="onit">Fundamentals of Programming</li>
+            <ul class="onit-ul">
+                <li>Variables</li>
+                <li>Operators</li>
+                <li>Control Structures</li>
+                <li>Functions</li>
+                <li>Arrays</li>
+                <li>Strings</li>
+            </ul>
+            <li class="onit">Object Oriented Programming</li>
+            <ul class="onit-ul">
+                <li>Classes</li>
+                <li>Inheritance</li>
+                <li>Polymorphism</li>
+                <li>Abstraction</li>
+                <li>Encapsulation</li>
+            </ul>
+            <li class="onit">Full Stack Development</li>
+            <ul class="onit-ul">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Bootstrap</li>
+                <li>JavaScript</li>
+                <li>Angular</li>
+            </ul>
+        </ul>
+    </div>
+    <div class="points-2">
+        <ul>
+            <li class="onit">Java</li>
+            <ul class="onit-ul">
+                <li>Variables</li>
+                <li>Operators</li>
+                <li>Control Structures</li>
+                <li>Functions</li>
+                <li>Arrays</li>
+                <li>Strings</li>
+            </ul>
+            <li class="onit">Python</li>
+            <ul class="onit-ul">
+                <li>Variables</li>
+                <li>Operators</li>
+                <li>Control Structures</li>
+                <li>Functions</li>
+                <li>Arrays</li>
+                <li>Strings</li>
+            </ul>
+            <li class="onit">JavaScript</li>
+            <ul class="onit-ul">
+                <li>Variables</li>
+                <li>Operators</li>
+                <li>Control Structures</li>
+                <li>Functions</li>
+                <li>Arrays</li>
+                <li>Strings</li>
+            </ul>
+        </ul>
+    </div>
+    <div class="points-3">
+        <ul>
+            <li class="onit">Java</li>
+            <ul class="onit-ul">
+                <li>Variables</li>
+                <li>Operators</li>
+                <li>Control Structures</li>
+                <li>Functions</li>
+                <li>Arrays</li>
+                <li>Strings</li>
+            </ul>
+            <li class="onit">Python</li>
+            <ul class="onit-ul">
+                <li>Variables</li>
+                <li>Operators</li>
+                <li>Control Structures</li>
+                <li>Functions</li>
+                <li>Arrays</li>
+                <li>Strings</li>
+            </ul>
+            <li class="onit">Full Stack Development</li>
+            <ul class="onit-ul">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Bootstrap</li>
+                <li>JavaScript</li>
+                <li>Angular</li>
+            </ul>
+        </ul>
+    </div>
+</div>

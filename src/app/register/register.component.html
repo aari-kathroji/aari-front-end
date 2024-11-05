@@ -1,0 +1,77 @@
+<div class="register">
+    <div class="for-login">
+        <form class="form-login" [formGroup]="register">
+            <div class="label form-label"><b>REGISTER HERE</b></div>
+            <div class="user form-label"><b>NAME</b></div>
+            <input type="text" name="" title="name" placeholder="Enter name" [id]='"nameInput"'
+                class="form-control user-name" formControlName="name">
+            <div class="fiel"
+                *ngIf="register.controls['name'].invalid && (register.controls['name'].touched || isFormSubmmited || register.controls['name'].dirty)">
+                <span class="field" *ngIf="register.controls['name'].errors?.['required']">**This field is
+                    required</span>
+                <span class="field" *ngIf="register.controls['name'].errors?.['minlength']">**minimum 5 characters
+                </span>
+            </div>
+            <div class="user form-label"><b>EMAIL</b></div>
+            <input type="email" name="" title="email" placeholder="Enter email" [id]='"emailInput"'
+                class="form-control user-name" formControlName="email">
+
+            <div class="fiel"
+                *ngIf="register.controls['email'].invalid && (register.controls['email'].touched || isFormSubmmited || register.controls['email'].dirty)">
+                <span class="field" *ngIf="register.controls['email'].errors?.['required']">**This field is
+                    required</span>
+                <span class="field" *ngIf="register.controls['email'].errors?.['minlength']">**minimum 5 characters
+                </span>
+                <span class="field" *ngIf="register.controls['email'].errors?.['email']">**Enter valid email
+                </span>
+            </div>
+            <div class="user form-label"><b>USER NAME</b></div>
+            <input type="text" name="" title="user" placeholder="Enter user name" [id]='"userNameInput"'
+                class="form-control user-name" formControlName="userName">
+
+            <div class="fiel"
+                *ngIf="register.controls['userName'].invalid && (register.controls['userName'].touched || isFormSubmmited || register.controls['userName'].dirty)">
+                <span class="field" *ngIf="register.controls['userName'].errors?.['required']">**This field is
+                    required</span>
+                <span class="field" *ngIf="register.controls['userName'].errors?.['minlength']">**minimum 5 characters
+                </span>
+            </div>
+
+
+            <div class="pass user form-label"><b>PASSWORD</b></div>
+            <input type="password" name="" title="pass" placeholder="Enter password" [id]='"passwordInput"'
+                class="form-control user-name" formControlName="password">
+
+
+            <div class="fiel"
+                *ngIf="register.controls['password'].invalid && (register.controls['password'].touched || isFormSubmmited || register.controls['password'].dirty)">
+                <span class="field" *ngIf="register.controls['password'].errors?.['required']">**This field is
+                    required</span>
+                <span class="field" *ngIf="register.controls['password'].errors?.['minlength']">**Must have atleast 6
+                    charcters</span>
+                <span class="field" *ngIf="register.controls['password'].errors?.['InvalidPassword']">**Remove any
+                    spaces or special characters</span>
+            </div>
+
+
+            <button class="btn login" (click)="onSubmit()">Register
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-arrow-right"
+                    viewBox="0 0 16 18.5">
+                    <path fill-rule="evenodd"
+                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                </svg>
+            </button>
+        </form>
+    </div>
+
+    <div class="for-register">
+        <button class="btn reg" routerLink="/home">Login
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-arrow-right"
+                viewBox="0 0 16 18.5">
+                <path fill-rule="evenodd"
+                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+            </svg>
+        </button>
+    </div>
+
+</div>
