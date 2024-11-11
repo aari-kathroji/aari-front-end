@@ -23,6 +23,5 @@ export class UserService {
   loginUser(user: any) {
     console.log("User           " + user)
     return this.http.post('http://localhost:4500/user/login', user)
-    
   }
 }
