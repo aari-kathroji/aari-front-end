@@ -7,6 +7,12 @@ import { StaffComponent } from './staff/staff.component';
 import { CourseComponent } from './course/course.component';
 import { AdminstaffComponent } from './adminstaff/adminstaff.component';
 import { RegisterComponent } from './register/register.component';
+import { StudentcourseComponent } from './studentcourse/studentcourse.component';
+import { StudentstaffComponent } from './studentstaff/studentstaff.component';
+import { StudentprogramComponent } from './studentprogram/studentprogram.component';
+import { AdminprogramComponent } from './adminprogram/adminprogram.component';
+import { AdminbatchComponent } from './adminbatch/adminbatch.component';
+import { AdminstudentcourseComponent } from './adminstudentcourse/adminstudentcourse.component';
 
 export const routes: Routes = [
     {
@@ -38,6 +44,26 @@ export const routes: Routes = [
     },
     {
         path : 'register', component : RegisterComponent
+    },
+    {
+        path : 'student-course',component : StudentcourseComponent
+    },
+    {
+        path :'student-staff', component : StudentstaffComponent
     }
+    ,
+    {
+        path :'student-program', component : StudentprogramComponent
+    },
+    {
+        path :'admin-program', component : AdminprogramComponent
+    },
+    {
+        path : 'admin-batch', component : AdminbatchComponent
+    },
+    {
+        path : 'admin-student-course', component : AdminstudentcourseComponent
+    }
+
 
 ];

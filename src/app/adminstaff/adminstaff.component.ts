@@ -21,7 +21,7 @@ export class AdminstaffComponent {
       email: new FormControl(""),
       password: new FormControl(""),
       userName: new FormControl(""),
-      role: new FormControl("admin"),
+      role: new FormControl("staff"),
       gender: new FormControl(""),
       contact: new FormControl(""),
       address: new FormControl("")
