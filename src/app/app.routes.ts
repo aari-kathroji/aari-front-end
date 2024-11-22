@@ -13,6 +13,9 @@ import { StudentprogramComponent } from './studentprogram/studentprogram.compone
 import { AdminprogramComponent } from './adminprogram/adminprogram.component';
 import { AdminbatchComponent } from './adminbatch/adminbatch.component';
 import { AdminstudentcourseComponent } from './adminstudentcourse/adminstudentcourse.component';
+import { AdminViewStudentsComponent } from './admin-view-students/admin-view-students.component';
+import { SingleViewComponent } from './single-view/single-view.component';
+import { EditInfoComponent } from './edit-info/edit-info.component';
 
 export const routes: Routes = [
     {
@@ -63,6 +66,15 @@ export const routes: Routes = [
     },
     {
         path : 'admin-student-course', component : AdminstudentcourseComponent
+    },
+    {
+        path: 'admin-view-students',component: AdminViewStudentsComponent
+    },
+    {
+        path: 'singleView/:_id',component: SingleViewComponent
+    },
+    {
+        path: 'edit/:_id',component: EditInfoComponent
     }
 
 

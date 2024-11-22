@@ -20,7 +20,7 @@
 
 .wrapper{
   width:50vw;
-  height: 34vw;
+  height: auto;
   background:rgba(255,255,255,0.1);
   border:2px solid rgba(255,255,255,0.2);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
@@ -78,6 +78,18 @@
   font-size: 1.3vw;
 }
 
+.input-box .input-field select{
+  background: none; 
+  border:2px solid rgbs(255,255,255,0.2); 
+  border-radius: 6px;
+  font-size: 0.83vw; 
+  color: white;
+  padding: 15px 15px 15px 40px;
+}
+
+.input-box .input-field select option{
+  color: black;
+}
 .wrapper label{
   display:inline-block;
   font-size: 14.5px;

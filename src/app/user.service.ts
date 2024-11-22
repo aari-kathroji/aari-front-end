@@ -20,8 +20,24 @@ export class UserService {
     })
 
   }
+  getSingleUser(_id: any) {
+    return this.http.get('http://localhost:4500/user/'+ _id)
+  }
+
+  getStudents(){
+    return this.http.get('http://localhost:4500/user/viewStudents')
+  }
   loginUser(user: any) {
     console.log("User           " + user)
     return this.http.post('http://localhost:4500/user/login', user)
+  }
+  updateUser(_id: any,user: any) {
+    console.log("User           " + user)
+    return this.http.put('http://localhost:4500/user/'+ _id, user)
+    
+  }
+  deleteUser(_id: any) {
+    console.log("User           " + _id)
+    return this.http.delete('http://localhost:4500/user/'+ _id)
   }
 }
