@@ -29,3 +29,29 @@
 .onit-ul.show{
     display: block;
 }
+.just{
+    width : 100vw;
+    display:flex;
+}
+.head{
+    width: 100vw;
+    height: 15vw;
+    margin: 0.5vw;
+    padding: 2px;
+    border: 0.2vw solid black;
+    text-align: center;
+    font-size: 2.5vw;
+    border-radius: 25px;
+}
+.head1{
+    height: 15vw;
+    margin: 0.5vw;
+    padding: 2px;
+    font-size: 2.5vw;
+    border-radius: 25px;
+    background-image: url(../../future-of-java-programming-language.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.5s ease 0.1s;
+}

@@ -1,6 +1,6 @@
 .nav{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-evenly;
     height: 5vw;
     /* background-color: rgb(246, 140, 74); */

@@ -1,5 +1,3 @@
-
-
 <div class="body">
     <div class="wrapper">
         <form action="" [formGroup]="adminRegister">
@@ -14,7 +12,7 @@
                     <i class='bx bxs-user'></i>
                 </div>
             </div>
-    
+
             <div class="input-box">
                 <div class="input-field">
                     <input type="email" placeholder="Email" required formControlName="email">
@@ -25,38 +23,44 @@
                     <i class='bx bxs-phone'></i>
                 </div>
             </div>
-    
+
             <div class="input-box">
                 <div class="input-field">
                     <input type="password" placeholder="Password" required formControlName="password">
-                    
-                    <i class='bx bxs-lock-alt' ></i>
+
+                    <i class='bx bxs-lock-alt'></i>
                 </div>
                 <div class="input-field">
-                    <input type="password" placeholder="Confirm Password" required formControlName="password" >
-                    <i class='bx bxs-lock-alt' ></i>
+                    <input type="password" placeholder="Confirm Password" required formControlName="password">
+                    <i class='bx bxs-lock-alt'></i>
                 </div>
             </div>
 
             <div class="input-box">
-                    <select class="input-field dropdown" formControlName="role"  style="background: transparent; border:2px solid rgbs(255,255,255,0.2); border-radius: 6px; font-size: 0.83vw; padding: 15px 15px 15px 40px;color: white;" required>
-                        <option value="" selected hidden>Role</option>
-                        <option value="admin" style="background-color: black">Admin</option>
-                        <option value="staff" style="background-color: black;">Staff</option>
-                        <option value="student" style="background-color: black;">Student</option>
-                    </select>
-                <div class="input-field">
-                    <input type="gender" placeholder="Gender" required formControlName="gender">
-                    <i class='bx bx-male-female'></i>
-                </div>
-            </div>   
-            
-            <label><input type="checkbox" (change)="onCheckboxChange($event)">I hereby declare that the above information provided is true and correct</label>
+                <select class="input-field dropdown" formControlName="role"
+                    style="background: transparent; border:2px solid rgbs(255,255,255,0.2); border-radius: 6px; font-size: 0.83vw; padding: 15px 15px 15px 40px;color: white;"
+                    required>
+                    <option value="" selected hidden>Role</option>
+                    <option value="admin" style="background-color: black">Admin</option>
+                    <option value="staff" style="background-color: black;">Staff</option>
+                    <option value="student" style="background-color: black;">Student</option>
+                </select>
+                <select class="input-field dropdown" formControlName="gender"
+                    style="background: transparent; border:2px solid rgbs(255,255,255,0.2); border-radius: 6px; font-size: 0.83vw; padding: 15px 15px 15px 40px;color: white;"
+                    required>
+                    <option value="" selected hidden>Gender</option>
+                    <option value="batch1" style="background-color: black">Male</option>
+                    <option value="batch2" style="background-color: black;">Female</option>
+                    <option value="batch3" style="background-color: black;">Others</option>
+                </select>
+
+            </div>
+
+            <label><input type="checkbox" (change)="onCheckboxChange($event)">I hereby declare that the above
+                information provided is true and correct</label>
 
             <button type="submit" class="btn" (click)="onSubmit()">Register</button>
             <button type="submit" class="btn" (click)="viewStudents()">Back</button>
         </form>
     </div>
-    </div>
-
-
+</div>

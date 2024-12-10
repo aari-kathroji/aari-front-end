@@ -16,11 +16,12 @@ import { AdminstudentcourseComponent } from './adminstudentcourse/adminstudentco
 import { AdminViewStudentsComponent } from './admin-view-students/admin-view-students.component';
 import { SingleViewComponent } from './single-view/single-view.component';
 import { EditInfoComponent } from './edit-info/edit-info.component';
+import { LoginComponent } from './login/login.component';
 
 export const routes: Routes = [
     {
         path: "",
-        redirectTo : 'home',
+        redirectTo : 'login',
         pathMatch: 'full'
 
     },
@@ -29,6 +30,9 @@ export const routes: Routes = [
     },
     {
         path : 'course', component : CourseComponent
+    },
+    {
+        path:'login',component:LoginComponent
     },
     {
         path : 'batch', component : BatchComponent
