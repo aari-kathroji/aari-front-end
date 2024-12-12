@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { RouterEvent, RouterLink, RouterModule, RouterOutlet } from '@angular/router';
+import { RouterEvent, RouterLink, RouterModule, RouterOutlet ,Router} from '@angular/router';
 import { AdminService } from '../admin.service';
 import { UserService } from '../user.service';
 
@@ -16,7 +16,7 @@ export class AdminstaffComponent {
   adminRegister:FormGroup
   checkBoxValue: boolean = false;
   isFromSubmitted:boolean=false
-  constructor(private router:RouterOutlet,private userService:UserService){
+  constructor(private router:RouterOutlet,private userService:UserService,private router1:Router){
     this.adminRegister = new FormGroup({
       name: new FormControl(""),
       email: new FormControl(""),
@@ -39,8 +39,8 @@ export class AdminstaffComponent {
     if((this.checkBoxValue==true)){
 
       console.log(this.adminRegister.value);
-      this.userService.addUser(this.adminRegister.value)
-      window.location.href = '/admin-view-students'
+      this.userService.addUser(this.adminRegister.value);
+      this.router1.navigate(['/login']);
     }
     else{
       alert("Please accept terms and conditions");

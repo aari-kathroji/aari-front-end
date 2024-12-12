@@ -42,17 +42,18 @@ export class LoginComponent {
   onSubmit() {
     this.UserService.loginUser(this.login.value).subscribe((data: any) => {
       try {
+        console.log(data);
         if (!data || Object.keys(data).length === 0) { // Check if object is empty
           alert("Invalid username or password");
         } else {
-          localStorage.setItem('user', data[0].userName);
-          localStorage.setItem('role', data[0].role);
           this.router.navigate(['/home']).then(() => {
             window.location.reload();
           });
         }
       }
       catch (error) {
+        console.log(error);
+        console.log(data);
         alert("Invalid username or password");
       }
     });
