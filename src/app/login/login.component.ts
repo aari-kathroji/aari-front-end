@@ -46,9 +46,10 @@ export class LoginComponent {
         if (!data || Object.keys(data).length === 0) { // Check if object is empty
           alert("Invalid username or password");
         } else {
-          this.router.navigate(['/home']).then(() => {
-            window.location.reload();
-          });
+          this.router.navigate(['/home']);
+          document.cookie = `accessToken=${data.accessToken}; path=/;`;
+          document.cookie = `refreshToken=${data.refreshToken}; path=/;`;
+
         }
       }
       catch (error) {

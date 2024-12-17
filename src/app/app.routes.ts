@@ -17,6 +17,7 @@ import { AdminViewStudentsComponent } from './admin-view-students/admin-view-stu
 import { SingleViewComponent } from './single-view/single-view.component';
 import { EditInfoComponent } from './edit-info/edit-info.component';
 import { LoginComponent } from './login/login.component';
+import { AuthGuard } from './auth.guard';
 
 export const routes: Routes = [
     {
@@ -26,7 +27,7 @@ export const routes: Routes = [
 
     },
     {
-        path : 'home', component : HomeComponent
+        path : 'home', component : HomeComponent, canActivate : [AuthGuard]
     },
     {
         path : 'course', component : CourseComponent
