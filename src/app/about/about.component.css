@@ -203,3 +203,55 @@
     flex-wrap: wrap;
     margin-top: 1vw;
 }
+.images-1, .images-2, .images-3, .images-4{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 80vh;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 2.5vw;
+    margin-bottom: 2.5vw;
+    transition: transform 0.3s ease;
+}
+
+.images-1 {
+    background-image: url('../Images/About/AARI\ EDUCATIONAL\ \(4\)[1]_pages-to-jpg-0001.jpg');
+}
+
+.images-2 {
+    background-image: url('../Images/About/AARI\ EDUCATIONAL\ \(4\)[1]_pages-to-jpg-0002.jpg');
+}
+
+.images-3 {
+    background-image: url('../Images/About/AARI\ EDUCATIONAL\ \(4\)[1]_pages-to-jpg-0003.jpg');
+}
+
+.images-4 {
+    background-image: url('../Images/About/AARI\ EDUCATIONAL\ \(4\)[1]_pages-to-jpg-0004.jpg');
+}
+.images-1.hidden, .images-2.hidden, .images-3.hidden, .images-4.hidden {
+    display: none;
+}
+.inner-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    width: 100%;
+}
+.main-div{
+    background: radial-gradient(circle at 10% 20%, rgb(255, 168, 168) 0%, rgb(244, 126, 84) 100.7%);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 50px;
+    border: 0.1vw solid white;
+}
+.page{
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 0, 0);
+    border: 0.1vw solid white;
+    border-radius: 2vw;
+}
