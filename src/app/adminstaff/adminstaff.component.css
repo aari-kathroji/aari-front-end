@@ -118,4 +118,169 @@
 }
  
 
- 
+.timeline{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  /* border: 1px solid black; */
+  background-color: rgb(255, 255, 255);
+}
+
+.oneside{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  /* border: 1px solid black; */
+  background: linear-gradient(to right, rgb(255, 166, 0), rgb(255, 255, 255));
+  padding: 1%;
+  border-radius:50px ;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+.oneside-img {
+  width: 20%;
+  height: 10%;
+  /* border: 1px solid black; */
+  background-color: rgb(235, 157, 54);
+  border-radius: 100%;
+  margin: 10px
+}
+.description1{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: auto;
+  /* border: 1px solid black; */
+  background: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 166, 0));
+  padding: 1%;
+  border-radius:50px ;
+  justify-content: center;
+}
+.name{
+  font-weight: bolder;
+  text-shadow: 0.1vw 0.1vw 0.1vw rgb(0, 0, 0);
+  font-size :50px;
+}
+.secondside{
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  height: auto;
+  /* border: 1px solid black; */
+  background: linear-gradient(to left, rgb(255, 166, 0), rgb(255, 255, 255));
+  padding: 1%;
+  border-radius: 50px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+.secondside-img {
+  width: 20%;
+  height: 10%;
+  /* border: 1px solid black; */
+  background-color: rgb(235, 157, 54);
+  border-radius: 100%;
+  margin: 10px
+}
+
+.description2{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: auto;
+  /* border: 1px solid black; */
+  background: linear-gradient(to left, rgb(255, 255, 255), rgb(255, 166, 0));
+  padding: 1%;
+  border-radius:50px ;
+  justify-content: center;
+}
+
+/* Initial state: hidden offscreen */
+.hidden-left {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 0.5s ease-in-out;
+}
+
+.hidden-right {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.5s ease-in-out;
+}
+
+/* Animated state: visible onscreen */
+.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+.animate-left-to-right {
+  animation: slideInFromLeft 1s ease-in-out forwards;
+}
+
+.animate-right-to-left {
+  animation: slideInFromRight 1s ease-in-out forwards;
+}
+
+
+
+
+/* 
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.timeline .oneside {
+  animation: slideInFromLeft 1s ease-out;
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.timeline .secondside {
+  animation: slideInFromRight 1s ease-out;
+  opacity: 0;
+  transform: translateX(100%);
+} */

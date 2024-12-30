@@ -1,4 +1,4 @@
-<div class="register">
+<!-- <div class="register">
     <div class="for-login">
         <form class="form-login" [formGroup]="register">
             <div class="label form-label"><b>REGISTER HERE</b></div>
@@ -74,4 +74,74 @@
         </button>
     </div>
 
+</div> -->
+
+
+
+
+<div class="body">
+    <div class="wrapper">
+        <form action="" [formGroup]="adminRegister">
+            <h1>Registration</h1>
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="text" placeholder="Full Name" required formControlName="name">
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="input-field">
+                    <input type="text" placeholder="Username" required formControlName="userName">
+                    <i class='bx bxs-user'></i>
+                </div>
+            </div>
+
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="email" placeholder="Email" required formControlName="email">
+                    <i class='bx bxs-envelope'></i>
+                </div>
+                <div class="input-field">
+                    <input type="number" placeholder="Phone Number" required formControlName="contact">
+                    <i class='bx bxs-phone'></i>
+                </div>
+            </div>
+
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="password" placeholder="Password" required formControlName="password">
+
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+                <div class="input-field">
+                    <input type="password" placeholder="Confirm Password" required formControlName="password">
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+            </div>
+
+            <div class="input-box">
+                <select class="input-field dropdown" formControlName="role"
+                    style="background: transparent; border:2px solid rgbs(255,255,255,0.2); border-radius: 6px; font-size: 0.83vw; padding: 15px 15px 15px 40px;color: white;"
+                    required>
+                    <option value="" selected hidden>Role</option>
+                    <option value="admin" style="background-color: black">Admin</option>
+                    <option value="staff" style="background-color: black;">Staff</option>
+                    <option value="student" style="background-color: black;">Student</option>
+                </select>
+                <select class="input-field dropdown" formControlName="gender"
+                    style="background: transparent; border:2px solid rgbs(255,255,255,0.2); border-radius: 6px; font-size: 0.83vw; padding: 15px 15px 15px 40px;color: white;"
+                    required>
+                    <option value="" selected hidden>Gender</option>
+                    <option value="Male" style="background-color: black">Male</option>
+                    <option value="Female" style="background-color: black;">Female</option>
+                    <option value="Others" style="background-color: black;">Others</option>
+                </select>
+
+            </div>
+
+            <label><input type="checkbox" (change)="onCheckboxChange($event)">I hereby declare that the above
+                information provided is true and correct</label>
+
+            <button type="submit" class="btn" (click)="onSubmit()">Register</button>
+            <button type="submit" class="btn" (click)="viewStudents()">Back</button>
+        </form>
+    </div>
 </div>
