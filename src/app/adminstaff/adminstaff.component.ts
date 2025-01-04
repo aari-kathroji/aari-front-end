@@ -20,36 +20,17 @@ import { ScrollAnimateDirective } from '../scroll-animate.directive';
   styleUrls: ['./adminstaff.component.css'],
 })
 export class AdminstaffComponent {
-  adminRegister: FormGroup;
-  checkBoxValue: boolean = false;
+  staffs: any[] = [];
+  constructor(private router: Router, private userService: UserService) {}
 
-  constructor(private router: Router, private userService: UserService) {
-    this.adminRegister = new FormGroup({
-      name: new FormControl(""),
-      email: new FormControl(""),
-      password: new FormControl(""),
-      userName: new FormControl(""),
-      role: new FormControl(""),
-      gender: new FormControl(""),
-      contact: new FormControl("")
-    });
+  ngOnInit() {
+    this.userService.getTeachers().subscribe((data: any) => {
+      this.staffs = data;
+    })
   }
-
-  onCheckboxChange(event: any) {
-    this.checkBoxValue = event.target.checked;
-  }
-
-  onSubmit() {
-    if (this.checkBoxValue) {
-      console.log(this.adminRegister.value);
-      this.userService.addUser(this.adminRegister.value);
-      this.router.navigate(['/login']);
-    } else {
-      alert("Please accept terms and conditions");
-    }
-  }
-
   viewStudents() {
     window.location.href = '/admin-view-students';
   }
+
+
 }

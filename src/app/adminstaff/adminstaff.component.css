@@ -16,6 +16,7 @@
   background-size: cover;
   height: 30vw;
   background-position: center;
+  overflow-x: hidden;
 }
 
 .wrapper{
@@ -125,6 +126,7 @@
   height: auto;
   /* border: 1px solid black; */
   background-color: rgb(255, 255, 255);
+  overflow: hidden;
 }
 
 .oneside{
@@ -196,17 +198,37 @@
   justify-content: center;
 }
 
-/* Initial state: hidden offscreen */
+/* Hidden States */
 .hidden-left {
   opacity: 0;
   transform: translateX(-100%);
-  transition: all 0.5s ease-in-out;
+  transition: all 1s ease;
 }
 
 .hidden-right {
   opacity: 0;
   transform: translateX(100%);
-  transition: all 0.5s ease-in-out;
+  transition: all 1s ease;
+}
+
+/* Animation States */
+.animate-left-to-right {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 1s ease;
+}
+
+.animate-right-to-left {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 1s ease;
+}
+.after-img {
+  /* Add styles here */
+  background-color: #f2f2f2;
+  padding: 20px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
 }
 
 /* Animated state: visible onscreen */
@@ -236,15 +258,6 @@
     transform: translateX(0);
     opacity: 1;
   }
-}
-
-
-.animate-left-to-right {
-  animation: slideInFromLeft 1s ease-in-out forwards;
-}
-
-.animate-right-to-left {
-  animation: slideInFromRight 1s ease-in-out forwards;
 }
 
 

@@ -27,6 +27,9 @@ export class UserService {
   getStudents() {
     return this.http.get('http://localhost:4500/user/viewStudents')
   }
+  getTeachers() {
+    return this.http.get('http://localhost:4500/user/viewTeachers')
+  }
   loginUser(user: any) {
     console.log("User           " + user)
     return this.http.post('http://localhost:4500/login', user)

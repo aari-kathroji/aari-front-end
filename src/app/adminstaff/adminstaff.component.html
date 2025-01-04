@@ -64,20 +64,23 @@
         </form>
     </div>
 </div> -->
-<div class="timeline" id="timeline">
-    <div class="oneside" appScrollAnimate>
-        <img src="https://img.freepik.com/premium-vector/free-vector-businessman-character-isolated_679599-52.jpg"
-            alt="Event 1 Photo" class="oneside-img">
+<div class="timeline" id="timeline" *ngFor="let staff of staffs; let i = index">
+    <div class="oneside" appScrollAnimate [index]="i">
+        <img *ngIf="i%2==0" [src]="staff.gender === 'male' || staff.gender === 'Male' 
+        ? 'http://localhost:4500/assets/image.png' 
+        : 'http://localhost:4500/assets/bride.jpg'" alt="" class="oneside-img" />
         <div class="description1">
-            <h2 class="name">John</h2>
-            <p class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt explicabo nostrum non,
-                perferendis dignissimos sapiente, voluptatem sint blanditiis obcaecati sed voluptatum assumenda id.
-                Commodi, ad corporis veniam, similique possimus ea aspernatur inventore officiis porro nostrum
-                doloremque? Minus harum, eveniet omnis voluptatum velit libero quibusdam a, unde architecto dolores amet
-                repudiandae?</p>
+            <h2 class="name">Name: {{staff.name}}</h2>
+            <h4 class="desc"><b>Contact: </b>{{staff.contact}}</h4>
+            <p class="desc"><b>Description: </b>{{staff.description}}</p>
         </div>
+        <img *ngIf="i%2!=0" [src]="staff.gender === 'male' || staff.gender === 'Male' 
+        ? 'http://localhost:4500/assets/image.png' 
+        : 'http://localhost:4500/assets/bride.jpg'" alt="" class="oneside-img" />
     </div>
-    <div class="secondside" appScrollAnimate>
+
+
+    <!-- <div class="secondside" appScrollAnimate>
         <img src="https://www.shareicon.net/data/2016/07/05/791214_man_512x512.png"
             alt="Event 2 Photo" class="secondside-img">
         <div class="description2">
@@ -122,7 +125,7 @@
                 doloremque? Minus harum, eveniet omnis voluptatum velit libero quibusdam a, unde architecto dolores amet
                 repudiandae?</p>
         </div>
-    </div>
+    </div> -->
 </div>
 
 <!-- <script>
