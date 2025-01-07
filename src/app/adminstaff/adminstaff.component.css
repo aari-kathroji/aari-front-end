@@ -202,27 +202,28 @@
 .hidden-left {
   opacity: 0;
   transform: translateX(-100%);
-  transition: all 1s ease;
+  transition: all 0.5s ease;
 }
 
 .hidden-right {
   opacity: 0;
   transform: translateX(100%);
-  transition: all 1s ease;
+  transition: all 0.5s ease;
 }
 
 /* Animation States */
 .animate-left-to-right {
   opacity: 1;
   transform: translateX(0);
-  transition: all 1s ease;
+  transition: all 0.5s ease;
 }
 
 .animate-right-to-left {
   opacity: 1;
   transform: translateX(0);
-  transition: all 1s ease;
+  transition: all 0.5s ease;
 }
+
 .after-img {
   /* Add styles here */
   background-color: #f2f2f2;

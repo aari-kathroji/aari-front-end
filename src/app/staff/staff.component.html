@@ -1,4 +1,4 @@
-<div class="outer_curve">
+<!-- <div class="outer_curve">
     <div class="out_holder">
         <div class="vol">
             <div class="vol_up"></div>
@@ -13,7 +13,6 @@
                 <div class="dupli">
                 <div class="tab_content">
 
-                    <!-- first card -->
                     <div class="staff_cont_1">
                         <div class="staff_img1"></div>
                         <div class="staff_data_container">
@@ -74,7 +73,6 @@
                         </div>
                     </div>
 
-                    <!-- second card -->
 
                     <div class="staff_cont_1">
                         <div class="staff_img2"></div>
@@ -136,7 +134,6 @@
                         </div>
                     </div>
 
-                    <!-- thrid card -->
 
                     <div class="staff_cont_1">
                         <div class="staff_img3"></div>
@@ -210,7 +207,6 @@
                 <div class="dupli">
                     <div class="tab_content">
     
-                        <!-- first card -->
                         <div class="staff_cont_1">
                             <div class="staff_img1"></div>
                             <div class="staff_data_container">
@@ -271,7 +267,6 @@
                             </div>
                         </div>
     
-                        <!-- second card -->
     
                         <div class="staff_cont_1">
                             <div class="staff_img2"></div>
@@ -333,7 +328,6 @@
                             </div>
                         </div>
     
-                        <!-- thrid card -->
     
                         <div class="staff_cont_1">
                             <div class="staff_img3"></div>
@@ -400,5 +394,22 @@
             </div>            
             
         </div>
+    </div>
+</div> -->
+
+
+<div class="timeline" id="timeline" *ngFor="let staff of staffs; let i = index">
+    <div class="oneside" appScrollAnimate [index]="i">
+        <img *ngIf="i%2==0" [src]="staff.gender === 'male' || staff.gender === 'Male' 
+        ? 'http://localhost:4500/assets/image.png' 
+        : 'http://localhost:4500/assets/bride.jpg'" alt="" class="oneside-img" />
+        <div class="description1">
+            <h2 class="name">Name: {{staff.name}}</h2>
+            <h4 class="desc"><b>Contact: </b>{{staff.contact}}</h4>
+            <p class="desc"><b>Description: </b>{{staff.description}}</p>
+        </div>
+        <img *ngIf="i%2!=0" [src]="staff.gender === 'male' || staff.gender === 'Male' 
+        ? 'http://localhost:4500/assets/image.png' 
+        : 'http://localhost:4500/assets/bride.jpg'" alt="" class="oneside-img" />
     </div>
 </div>

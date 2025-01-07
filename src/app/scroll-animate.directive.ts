@@ -1,41 +1,43 @@
-import { Directive, ElementRef, HostListener, Renderer2, Input } from '@angular/core';
+import { Directive, ElementRef, Renderer2, Input, HostListener } from '@angular/core';
 
 @Directive({
   selector: '[appScrollAnimate]',
   standalone: true,
 })
 export class ScrollAnimateDirective {
-  private isVisible = false; // Tracks if the element is in view
-  private scrollPosition = 0; // Tracks the last scroll position
-
-  @Input() index!: number; // Accept the index of the element
-
+  private hasAnimated = false;
+  @Input() index!: number;
+  
   constructor(private el: ElementRef, private renderer: Renderer2) {
-    // Initially hide the element
     const hiddenClass = this.index % 2 === 0 ? 'hidden-left' : 'hidden-right';
     this.renderer.addClass(this.el.nativeElement, hiddenClass);
   }
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
-    const position = this.el.nativeElement.getBoundingClientRect().top;
-    const screenHeight = window.innerHeight;
-
-    // Trigger animation only when scrolling down and element is not already visible
-    if (!this.isVisible && position < screenHeight && position > 0) {
-      this.isVisible = true;
-      this.applyAnimation();
-    }
+    this.checkVisibility();
   }
 
-  private applyAnimation() {
-    // Alternate animations based on index
-    if (this.index % 2 === 0) {
-      this.renderer.removeClass(this.el.nativeElement, 'hidden-left');
-      this.renderer.addClass(this.el.nativeElement, 'animate-left-to-right');
-    } else {
-      this.renderer.removeClass(this.el.nativeElement, 'hidden-right');
-      this.renderer.addClass(this.el.nativeElement, 'animate-right-to-left');
+  ngAfterViewInit() {
+    this.checkVisibility();
+  }
+
+  private checkVisibility() {
+    if (this.hasAnimated) return;
+
+    const rect = this.el.nativeElement.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+    const visibilityThreshold = 50;
+
+    if (rect.top <= windowHeight - visibilityThreshold) {
+      this.hasAnimated = true;
+      
+      const isEven = this.index % 2 === 0;
+      const hiddenClass = isEven ? 'hidden-left' : 'hidden-right';
+      const animationClass = isEven ? 'animate-left-to-right' : 'animate-right-to-left';
+      
+      this.renderer.removeClass(this.el.nativeElement, hiddenClass);
+      this.renderer.addClass(this.el.nativeElement, animationClass);
     }
   }
 }

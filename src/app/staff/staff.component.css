@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Protest+Revolution&family=Protest+Riot&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Protest+Revolution&family=Protest+Riot&display=swap'); */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
 .outer_curve{
     display: flex;
@@ -329,3 +330,293 @@ hr{
     }
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: "Poppins",sans-serif;
+}
+
+.body{
+  display: flex;
+  justify-content: centre;
+  align-items: center;
+  min-height: 100vh;
+  background: url('../Images/mainimage2.jpg') no-repeat;
+  background-size: cover;
+  height: 30vw;
+  background-position: center;
+  overflow-x: hidden;
+}
+
+.wrapper{
+  width:50vw;
+  height: auto;
+  background:rgba(255,255,255,0.1);
+  border:2px solid rgba(255,255,255,0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+  backdrop-filter: blur(40px);
+  border-radius: 0.52vw;
+  color: #fff;
+  padding: 2.08vw 1.82vw 2.86vw;
+  margin-left: 25vw;
+  /* margin: 0 10px; */
+   margin-top: 1vw; 
+ 
+}
+
+.wrapper h1{
+  font-size: 2vw;
+  text-align: center;
+  margin-bottom: 1vw;
+}
+
+.wrapper .input-box{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; 
+  /* background: slateblue; */
+ }
+
+.input-box .input-field {
+  position: relative;
+  width:48%;
+  height:3vw;
+  margin:0.677vw 0;
+}
+
+.input-box .input-field input{
+  width:100%;
+  height:100%;
+  background: transparent;
+  border:2px solid rgbs(255,255,255,0.2);
+  outline:none;
+  font-size: 0.83vw;
+  color:#fff;
+  border-radius: 6px;
+  padding:15px 15px 15px 40px;
+}
+
+.input-box .input-field input::placeholder{
+  color: #fff;
+}
+
+.input-box .input-field i{
+  position: absolute;
+  left:20px;
+  top:35%;
+  transform:translate(-50%);
+  font-size: 1.3vw;
+}
+
+.input-box .input-field select{
+  background: none; 
+  border:2px solid rgbs(255,255,255,0.2); 
+  border-radius: 6px;
+  font-size: 0.83vw; 
+  color: white;
+  padding: 15px 15px 15px 40px;
+}
+
+.input-box .input-field select option{
+  color: black;
+}
+.wrapper label{
+  display:inline-block;
+  font-size: 14.5px;
+  margin:10px 0 23px;
+  margin-top: 2vw;
+}
+
+.wrapper label input{
+  accent-color: #fff;
+  margin-right: 5px;
+}
+
+.wrapper .btn{
+  width:100%;
+  height:45px;
+  color:black;
+  font-weight: 600; 
+  font-size: 16px;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor:pointer;
+  margin-top: 1.2vw;
+}
+ 
+
+.timeline{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  /* border: 1px solid black; */
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+}
+
+.oneside{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  /* border: 1px solid black; */
+  background: linear-gradient(to right, rgb(255, 166, 0), rgb(255, 255, 255));
+  padding: 1%;
+  border-radius:50px ;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+.oneside-img {
+  width: 20%;
+  height: 10%;
+  /* border: 1px solid black; */
+  background-color: rgb(235, 157, 54);
+  border-radius: 100%;
+  margin: 10px
+}
+.description1{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: auto;
+  /* border: 1px solid black; */
+  background: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 166, 0));
+  padding: 1%;
+  border-radius:50px ;
+  justify-content: center;
+}
+.name{
+  font-weight: bolder;
+  text-shadow: 0.1vw 0.1vw 0.1vw rgb(0, 0, 0);
+  font-size :50px;
+}
+.secondside{
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  height: auto;
+  /* border: 1px solid black; */
+  background: linear-gradient(to left, rgb(255, 166, 0), rgb(255, 255, 255));
+  padding: 1%;
+  border-radius: 50px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+.secondside-img {
+  width: 20%;
+  height: 10%;
+  /* border: 1px solid black; */
+  background-color: rgb(235, 157, 54);
+  border-radius: 100%;
+  margin: 10px
+}
+
+.description2{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: auto;
+  /* border: 1px solid black; */
+  background: linear-gradient(to left, rgb(255, 255, 255), rgb(255, 166, 0));
+  padding: 1%;
+  border-radius:50px ;
+  justify-content: center;
+}
+
+/* Hidden States */
+.hidden-left {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 0.5s ease;
+}
+
+.hidden-right {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.5s ease;
+}
+
+/* Animation States */
+.animate-left-to-right {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.5s ease;
+}
+
+.animate-right-to-left {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.5s ease;
+}
+
+.after-img {
+  /* Add styles here */
+  background-color: #f2f2f2;
+  padding: 20px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+/* Animated state: visible onscreen */
+.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
