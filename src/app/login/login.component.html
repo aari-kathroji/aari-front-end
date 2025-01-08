@@ -1,43 +1,102 @@
-<div class="for-login">
-    <form class="form-login" [formGroup]="login">
-        <div class="label form-label">LOGIN HERE</div>
-            <div class="user form-label">User name</div>
-            <input type="text" name=""  title="user" placeholder="Enter user name" [id]='"userNameInput"' class="form-control user-name" formControlName="userName">
+<div class="home-body">
 
-                <div class="fiel" *ngIf="login.controls['userName'].invalid && (login.controls['userName'].touched || isFormSubmmited || login.controls['userName'].dirty)">
-                    <span class="field" *ngIf="login.controls['userName'].errors?.['required']">**This field is required</span>
-                    <span class="field" *ngIf="login.controls['userName'].errors?.['minlength']">**minimum 5 characters </span>
-                </div>
+    <div class="for-title">
+        <div class="name">AARI</div>
+        <div class="sub-name">Institute of Corporate Training <br>& Software Development</div>
+        <div class="schedule">
+            <button class="btn sch">Schedule Free Demo
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                    class="bi bi-arrow-right" viewBox="0 0 16 18.5" style="margin-left: 1vw;">
+                    <path fill-rule="evenodd"
+                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                </svg></button>
+            <button class="btn sch view">View Location
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                    class="bi bi-arrow-right" viewBox="0 0 16 18.5" style="margin-left: 1vw;">
+                    <path fill-rule="evenodd"
+                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                </svg></button>
+        </div>
+
+        <div class="para">"Start your Coding Career with us & never look back" </div>
+
+        <div class="for-faq">
+            FAQ? <input type="text" name="" title="post" placeholder="Shoot your queries here !!" id=""
+                class="form-control faq">
+            <button class="btn post">POST</button>
+        </div>
+    </div>
+
+
+    <div class="for-login">
+        <form class="form-login" [formGroup]="login">
+            <div class="label form-label">LOGIN HERE</div>
+            <div class="user form-label">User name</div>
+            <input type="text" name="" title="user" placeholder="Enter user name" [id]='"userNameInput"'
+                class="form-control user-name" formControlName="userName">
+
+            <div class="fiel"
+                *ngIf="login.controls['userName'].invalid && (login.controls['userName'].touched || isFormSubmmited || login.controls['userName'].dirty)">
+                <span class="field" *ngIf="login.controls['userName'].errors?.['required']">**This field is
+                    required</span>
+                <span class="field" *ngIf="login.controls['userName'].errors?.['minlength']">**minimum 5 characters
+                </span>
+            </div>
 
 
             <div class="pass user form-label">Password</div>
-            <input type="password" name=""  title="pass" placeholder="Enter password" [id]='"passwordInput"' class="form-control user-name" formControlName="password">
+            <input type="password" name="" title="pass" placeholder="Enter password" [id]='"passwordInput"'
+                class="form-control user-name" formControlName="password">
 
-                
-            <div class="fiel" *ngIf="login.controls['password'].invalid && (login.controls['password'].touched || isFormSubmmited || login.controls['password'].dirty)">
-                <span class="field" *ngIf="login.controls['password'].errors?.['required']">**This field is required</span>
-                <span class="field" *ngIf="login.controls['password'].errors?.['minlength']">**Must have atleast 6 charcters</span>
-                <span class="field" *ngIf="login.controls['password'].errors?.['InvalidPassword']">**Remove any spaces or special characters</span>
+
+            <div class="fiel"
+                *ngIf="login.controls['password'].invalid && (login.controls['password'].touched || isFormSubmmited || login.controls['password'].dirty)">
+                <span class="field" *ngIf="login.controls['password'].errors?.['required']">**This field is
+                    required</span>
+                <span class="field" *ngIf="login.controls['password'].errors?.['minlength']">**Must have atleast 6
+                    charcters</span>
+                <span class="field" *ngIf="login.controls['password'].errors?.['InvalidPassword']">**Remove any spaces
+                    or special characters</span>
             </div>
-    
+            <div class="pass user form-label">Role</div>
+            <div class ="fiel">
+                <select class="form-select" aria-label="Role" formControlName="role">
+                    <option selected value="" disabled hidden class="form-label">Role</option>
+                    <option value="admin" class="form-label">Admin</option>
+                    <option value="user" class="form-label">User</option>
+                    <option value="student" class="form-label">Student</option>
+                </select>
+            </div>
+            <div class="fiel"
+                *ngIf="login.controls['role'].invalid && (login.controls['role'].touched || isFormSubmmited || login.controls['role'].dirty)">
+                <span class="field" *ngIf="login.controls['role'].errors?.['required']">**This field is required</span>
+            </div>
+
 
             <button class="btn login" (click)="onSubmit()">Login
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-arrow-right" viewBox="0 0 16 18.5">
-                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
-                  </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-arrow-right"
+                    viewBox="0 0 16 18.5">
+                    <path fill-rule="evenodd"
+                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                </svg>
             </button>
-            
+
 
             <div class="forgot">
                 forgot password ?
             </div>
-    </form>
-</div>
+        </form>
 
-<div class="for-register">
-    <button class="btn reg">Register Now
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-arrow-right" viewBox="0 0 16 18.5">
-            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
-          </svg>
-    </button>
+        <div class="for-register">
+            <button class="btn reg" routerLink="/register">Register Now
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-arrow-right"
+                    viewBox="0 0 16 18.5">
+                    <path fill-rule="evenodd"
+                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    
 </div>

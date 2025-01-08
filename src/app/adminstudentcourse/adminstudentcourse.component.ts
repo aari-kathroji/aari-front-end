@@ -1,0 +1,161 @@
+import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+
+@Component({
+  selector: 'app-adminstudentcourse',
+  standalone: true,
+  imports: [FormsModule],
+  templateUrl: './adminstudentcourse.component.html',
+  styleUrl: './adminstudentcourse.component.css'
+})
+export class AdminstudentcourseComponent {
+
+  
+ getBatch(value : any){
+  if(value=="0"){
+    document.querySelector('.points-1')?.classList.remove('show');
+    document.querySelector('.points-2')?.classList.remove('show');
+    document.querySelector('.points-3')?.classList.remove('show');
+    document.querySelector('.points-4')?.classList.remove('show');
+    document.querySelector('.points-5')?.classList.remove('show');
+    document.querySelector('.points-6')?.classList.remove('show');
+    document.querySelector('.points-7')?.classList.remove('show');
+    document.querySelector('.points-8')?.classList.remove('show');
+    document.querySelector('.points-9')?.classList.add('show');
+    document.querySelector('.points-10')?.classList.remove('show');
+    document.querySelector('.points-11')?.classList.remove('show');
+  }
+  if(value=="1"){
+    document.querySelector('.points-1')?.classList.add('show');
+    document.querySelector('.points-2')?.classList.remove('show');
+    document.querySelector('.points-3')?.classList.remove('show');
+    document.querySelector('.points-4')?.classList.remove('show');
+    document.querySelector('.points-5')?.classList.remove('show');
+    document.querySelector('.points-6')?.classList.remove('show');
+    document.querySelector('.points-7')?.classList.remove('show');
+    document.querySelector('.points-8')?.classList.remove('show');
+    document.querySelector('.points-9')?.classList.remove('show');
+    document.querySelector('.points-10')?.classList.remove('show');
+    document.querySelector('.points-11')?.classList.remove('show');
+  }
+  if(value=="2"){
+    document.querySelector('.points-2')?.classList.add('show');
+    document.querySelector('.points-1')?.classList.remove('show');
+    document.querySelector('.points-3')?.classList.remove('show');
+    document.querySelector('.points-4')?.classList.remove('show');
+    document.querySelector('.points-5')?.classList.remove('show');
+    document.querySelector('.points-6')?.classList.remove('show');
+    document.querySelector('.points-7')?.classList.remove('show');
+    document.querySelector('.points-8')?.classList.remove('show');
+    document.querySelector('.points-9')?.classList.remove('show');
+    document.querySelector('.points-10')?.classList.remove('show');
+    document.querySelector('.points-11')?.classList.remove('show');
+  }
+  if(value=="3"){
+    document.querySelector('.points-3')?.classList.add('show');
+    document.querySelector('.points-1')?.classList.remove('show');
+    document.querySelector('.points-2')?.classList.remove('show');
+    document.querySelector('.points-4')?.classList.remove('show');
+    document.querySelector('.points-5')?.classList.remove('show');
+    document.querySelector('.points-6')?.classList.remove('show');
+    document.querySelector('.points-7')?.classList.remove('show');
+    document.querySelector('.points-8')?.classList.remove('show');
+    document.querySelector('.points-9')?.classList.remove('show');
+    document.querySelector('.points-10')?.classList.remove('show');
+    document.querySelector('.points-11')?.classList.remove('show');
+  }
+  if(value=="4"){
+    document.querySelector('.points-4')?.classList.add('show');
+    document.querySelector('.points-1')?.classList.remove('show');
+    document.querySelector('.points-2')?.classList.remove('show');
+    document.querySelector('.points-3')?.classList.remove('show');
+    document.querySelector('.points-5')?.classList.remove('show');
+    document.querySelector('.points-6')?.classList.remove('show');
+    document.querySelector('.points-7')?.classList.remove('show');
+    document.querySelector('.points-8')?.classList.remove('show');
+    document.querySelector('.points-9')?.classList.remove('show');
+    document.querySelector('.points-10')?.classList.remove('show');
+    document.querySelector('.points-11')?.classList.remove('show');
+  }
+  if(value=="5"){
+    document.querySelector('.points-5')?.classList.add('show');
+    document.querySelector('.points-1')?.classList.remove('show');
+    document.querySelector('.points-2')?.classList.remove('show');
+    document.querySelector('.points-3')?.classList.remove('show');
+    document.querySelector('.points-4')?.classList.remove('show');
+    document.querySelector('.points-6')?.classList.remove('show');
+    document.querySelector('.points-7')?.classList.remove('show');
+    document.querySelector('.points-8')?.classList.remove('show');
+    document.querySelector('.points-9')?.classList.remove('show');
+    document.querySelector('.points-10')?.classList.remove('show');
+    document.querySelector('.points-11')?.classList.remove('show');
+  }
+  if(value=="6"){
+    document.querySelector('.points-6')?.classList.add('show');
+    document.querySelector('.points-1')?.classList.remove('show');
+    document.querySelector('.points-2')?.classList.remove('show');
+    document.querySelector('.points-3')?.classList.remove('show');
+    document.querySelector('.points-4')?.classList.remove('show');
+    document.querySelector('.points-5')?.classList.remove('show');
+    document.querySelector('.points-7')?.classList.remove('show');
+    document.querySelector('.points-8')?.classList.remove('show');
+    document.querySelector('.points-9')?.classList.remove('show');
+    document.querySelector('.points-10')?.classList.remove('show');
+    document.querySelector('.points-11')?.classList.remove('show');
+  }
+  if(value=="7"){
+    document.querySelector('.points-7')?.classList.add('show');
+    document.querySelector('.points-1')?.classList.remove('show');
+    document.querySelector('.points-2')?.classList.remove('show');
+    document.querySelector('.points-3')?.classList.remove('show');
+    document.querySelector('.points-4')?.classList.remove('show');
+    document.querySelector('.points-5')?.classList.remove('show');
+    document.querySelector('.points-6')?.classList.remove('show');
+    document.querySelector('.points-8')?.classList.remove('show');
+    document.querySelector('.points-9')?.classList.remove('show');
+    document.querySelector('.points-10')?.classList.remove('show');
+    document.querySelector('.points-11')?.classList.remove('show');
+  }
+  if(value=="8"){
+    document.querySelector('.points-8')?.classList.add('show');
+    document.querySelector('.points-1')?.classList.remove('show');
+    document.querySelector('.points-2')?.classList.remove('show');
+    document.querySelector('.points-3')?.classList.remove('show');
+    document.querySelector('.points-4')?.classList.remove('show');
+    document.querySelector('.points-5')?.classList.remove('show');
+    document.querySelector('.points-6')?.classList.remove('show');
+    document.querySelector('.points-7')?.classList.remove('show');
+    document.querySelector('.points-9')?.classList.remove('show');
+    document.querySelector('.points-10')?.classList.remove('show');
+    document.querySelector('.points-11')?.classList.remove('show');
+  }
+  if(value=="9"){
+    document.querySelector('.points-10')?.classList.add('show');
+    document.querySelector('.points-1')?.classList.remove('show');
+    document.querySelector('.points-2')?.classList.remove('show');
+    document.querySelector('.points-3')?.classList.remove('show');
+    document.querySelector('.points-4')?.classList.remove('show');
+    document.querySelector('.points-5')?.classList.remove('show');
+    document.querySelector('.points-6')?.classList.remove('show');
+    document.querySelector('.points-7')?.classList.remove('show');
+    document.querySelector('.points-8')?.classList.remove('show');
+    document.querySelector('.points-9')?.classList.remove('show');
+    document.querySelector('.points-11')?.classList.remove('show');
+    
+  }
+  if(value=="10"){
+    document.querySelector('.points-11')?.classList.add('show');
+    document.querySelector('.points-1')?.classList.remove('show');
+    document.querySelector('.points-2')?.classList.remove('show');
+    document.querySelector('.points-3')?.classList.remove('show');
+    document.querySelector('.points-4')?.classList.remove('show');
+    document.querySelector('.points-5')?.classList.remove('show');
+    document.querySelector('.points-6')?.classList.remove('show');
+    document.querySelector('.points-7')?.classList.remove('show');
+    document.querySelector('.points-8')?.classList.remove('show');
+    document.querySelector('.points-9')?.classList.remove('show');
+    document.querySelector('.points-10')?.classList.remove('show');
+ }
+}
+
+}

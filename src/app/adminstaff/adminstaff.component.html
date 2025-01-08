@@ -1,58 +1,146 @@
-
-
-<div class="body">
+<!-- <div class="body">
     <div class="wrapper">
-        <form action="">
-            <h1>Staff Registration</h1>
+        <form action="" [formGroup]="adminRegister">
+            <h1>Registration</h1>
             <div class="input-box">
                 <div class="input-field">
-                    <input type="text" placeholder="Full Name" required>
+                    <input type="text" placeholder="Full Name" required formControlName="name">
                     <i class='bx bxs-user'></i>
                 </div>
                 <div class="input-field">
-                    <input type="text" placeholder="Username" required>
+                    <input type="text" placeholder="Username" required formControlName="userName">
                     <i class='bx bxs-user'></i>
                 </div>
             </div>
-    
+
             <div class="input-box">
                 <div class="input-field">
-                    <input type="email" placeholder="Email" required>
+                    <input type="email" placeholder="Email" required formControlName="email">
                     <i class='bx bxs-envelope'></i>
                 </div>
                 <div class="input-field">
-                    <input type="number" placeholder="Phone Number" required>
+                    <input type="number" placeholder="Phone Number" required formControlName="contact">
                     <i class='bx bxs-phone'></i>
                 </div>
             </div>
-    
+
             <div class="input-box">
                 <div class="input-field">
-                    <input type="password" placeholder="Password" required>
-                    <i class='bx bxs-lock-alt' ></i>
+                    <input type="password" placeholder="Password" required formControlName="password">
+
+                    <i class='bx bxs-lock-alt'></i>
                 </div>
                 <div class="input-field">
-                    <input type="password" placeholder="Confirm Password" required>
-                    <i class='bx bxs-lock-alt' ></i>
+                    <input type="password" placeholder="Confirm Password" required formControlName="password">
+                    <i class='bx bxs-lock-alt'></i>
                 </div>
             </div>
 
             <div class="input-box">
-                <div class="input-field">
-                    <input type="address" placeholder="Address" required>
-                    <i class='bx bxs-landmark'></i>
-                </div>
-                <div class="input-field">
-                    <input type="gender" placeholder="Gender" required>
-                    <i class='bx bx-male-female'></i>
-                </div>
-            </div>   
-            
-            <label><input type="checkbox">I hereby declare that the above information provided is true and correct</label>
+                <select class="input-field dropdown" formControlName="role"
+                    style="background: transparent; border:2px solid rgbs(255,255,255,0.2); border-radius: 6px; font-size: 0.83vw; padding: 15px 15px 15px 40px;color: white;"
+                    required>
+                    <option value="" selected hidden>Role</option>
+                    <option value="admin" style="background-color: black">Admin</option>
+                    <option value="staff" style="background-color: black;">Staff</option>
+                    <option value="student" style="background-color: black;">Student</option>
+                </select>
+                <select class="input-field dropdown" formControlName="gender"
+                    style="background: transparent; border:2px solid rgbs(255,255,255,0.2); border-radius: 6px; font-size: 0.83vw; padding: 15px 15px 15px 40px;color: white;"
+                    required>
+                    <option value="" selected hidden>Gender</option>
+                    <option value="Male" style="background-color: black">Male</option>
+                    <option value="Female" style="background-color: black;">Female</option>
+                    <option value="Others" style="background-color: black;">Others</option>
+                </select>
 
-            <button type="submit" class="btn">Register</button>
+            </div>
+
+            <label><input type="checkbox" (change)="onCheckboxChange($event)">I hereby declare that the above
+                information provided is true and correct</label>
+
+            <button type="submit" class="btn" (click)="onSubmit()">Register</button>
+            <button type="submit" class="btn" (click)="viewStudents()">Back</button>
         </form>
     </div>
+</div> -->
+<div class="timeline" id="timeline" *ngFor="let staff of staffs; let i = index">
+    <div class="oneside" appScrollAnimate [index]="i">
+        <img *ngIf="i%2==0" [src]="staff.gender === 'male' || staff.gender === 'Male' 
+        ? 'http://localhost:4500/assets/image.png' 
+        : 'http://localhost:4500/assets/bride.jpg'" alt="" class="oneside-img" />
+        <div class="description1">
+            <h2 class="name">Name: {{staff.name}}</h2>
+            <h4 class="desc"><b>Contact: </b>{{staff.contact}}</h4>
+            <p class="desc"><b>Description: </b>{{staff.description}}</p>
+        </div>
+        <img *ngIf="i%2!=0" [src]="staff.gender === 'male' || staff.gender === 'Male' 
+        ? 'http://localhost:4500/assets/image.png' 
+        : 'http://localhost:4500/assets/bride.jpg'" alt="" class="oneside-img" />
     </div>
 
 
+    <!-- <div class="secondside" appScrollAnimate>
+        <img src="https://www.shareicon.net/data/2016/07/05/791214_man_512x512.png"
+            alt="Event 2 Photo" class="secondside-img">
+        <div class="description2">
+            <h2 class="name">Rahul</h2>
+            <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. In exercitationem quasi tempore
+                nemo. Repellendus non dicta aliquid minima sapiente eum dolor nesciunt eos quis? Nemo iusto nesciunt
+                eius architecto temporibus accusantium odio porro asperiores facilis, itaque similique necessitatibus
+                neque, recusandae velit fuga aperiam ducimus aut atque. Ab maiores labore molestias?</p>
+        </div>
+    </div>
+    <div class="oneside" appScrollAnimate>
+        <img src="https://img.freepik.com/premium-vector/free-vector-businessman-character-isolated_679599-52.jpg"
+            alt="Event 1 Photo" class="oneside-img">
+        <div class="description1">
+            <h2 class="name">Raghav</h2>
+            <p class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt explicabo nostrum non,
+                perferendis dignissimos sapiente, voluptatem sint blanditiis obcaecati sed voluptatum assumenda id.
+                Commodi, ad corporis veniam, similique possimus ea aspernatur inventore officiis porro nostrum
+                doloremque? Minus harum, eveniet omnis voluptatum velit libero quibusdam a, unde architecto dolores amet
+                repudiandae?</p>
+        </div>
+    </div>
+    <div class="secondside" appScrollAnimate>
+        <img src="https://www.shareicon.net/data/2016/07/05/791214_man_512x512.png"
+            alt="Event 2 Photo" class="secondside-img">
+        <div class="description2">
+            <h2 class="name">Tilak</h2>
+            <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. In exercitationem quasi tempore
+                nemo. Repellendus non dicta aliquid minima sapiente eum dolor nesciunt eos quis? Nemo iusto nesciunt
+                eius architecto temporibus accusantium odio porro asperiores facilis, itaque similique necessitatibus
+                neque, recusandae velit fuga aperiam ducimus aut atque. Ab maiores labore molestias?</p>
+        </div>
+    </div>
+    <div class="oneside" appScrollAnimate>
+        <img src="https://img.freepik.com/premium-vector/free-vector-businessman-character-isolated_679599-52.jpg"
+            alt="Event 1 Photo" class="oneside-img">
+        <div class="description1">
+            <h2 class="name">Suresh</h2>
+            <p class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt explicabo nostrum non,
+                perferendis dignissimos sapiente, voluptatem sint blanditiis obcaecati sed voluptatum assumenda id.
+                Commodi, ad corporis veniam, similique possimus ea aspernatur inventore officiis porro nostrum
+                doloremque? Minus harum, eveniet omnis voluptatum velit libero quibusdam a, unde architecto dolores amet
+                repudiandae?</p>
+        </div>
+    </div> -->
+</div>
+
+<!-- <script>
+    window.addEventListener("scroll", function () {
+      const elements = document.querySelectorAll(".oneside, .secondside");
+      const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+  
+      elements.forEach((element) => {
+        const rect = element.getBoundingClientRect();
+  
+        if (rect.top >= 0 && rect.bottom <= windowHeight) {
+          element.classList.add("visible");
+        } else {
+          element.classList.remove("visible");
+        }
+      });
+    });
+  </script> -->

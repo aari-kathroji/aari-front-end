@@ -1,0 +1,21 @@
+.nav-1{
+    justify-content: center;
+    align-items: center;
+}
+.nav-1.hidden{
+    display: none;
+}
+.nav-2{
+    justify-content: center;
+    align-items: center;
+}
+.nav-2.hidden{
+    display: none;
+}
+.nav-3{
+    justify-content: center;
+    align-items: center;
+}
+.nav-3.hidden{
+    display: none;
+}

@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="image">
+        <img [src]="student.gender === 'male'|| student.gender === 'Male' ? 'http://localhost:4500/assets/image.png' : 'http://localhost:4500/assets/bride.jpg'" alt="">
+    </div>
+    <div class="name">
+        Name: {{student.name}}
+    </div>
+    <div class="username">
+        User Name: {{student.userName}}
+    </div>
+    <div class="email">
+        Email: {{student.email}}
+    </div>
+    <div class="password">
+        Password: {{student.password}}
+    </div>
+    <div style="padding: 5px; border-radius:25px" *ngIf="student.gender" [style.background-color]="student.gender === 'male'|| student.gender === 'Male' ? '#ADD8E6' : '#FFC0CB'" >
+        Gender: {{student.gender}}
+    </div>
+    <div class="contact">
+        Contact: {{student.contact}}
+    </div>
+</div>
+<button class="back" routerLink="/admin-view-students">Back</button>
+<button [routerLink]="['/edit',student._id]"> Edit</button>

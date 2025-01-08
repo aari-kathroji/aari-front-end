@@ -1,14 +1,31 @@
 .nav{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-evenly;
     height: 5vw;
     /* background-color: rgb(246, 140, 74); */
     /* border: 1px solid black; */
 }
-.bar{
+.bar-1{
     justify-content: center;
     align-items: center;
+}
+.bar-1.hidden{
+    display: none;
+}
+.bar-2{
+    justify-content: center;
+    align-items: center;
+}
+.bar-2.hidden{
+    display: none;
+}
+.bar-3{
+    justify-content: center;
+    align-items: center;
+}
+.bar-3.hidden{
+    display: none;
 }
 .logo{
     /* border: 1px solid black; */

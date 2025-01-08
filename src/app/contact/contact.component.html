@@ -1,24 +1,41 @@
 <div class="home">
   <div class="home1">
-    <div class="contact"><h1>Contact us</h1>
-     <div class="name">
-   <input type="text" name="" id="Sname" placeholder="Name">
-   <input type="email" name="" id="email" placeholder="Email">
-   <input type="text" name="" id="message" placeholder="Message">
-     </div>
-     <div class="send">
-        <button type="button" class="btn btn-success">Send Message</button>
-    </div>
-     
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <div class="contact">
+        <h1>Contact us</h1>
+        <div class="name">
+          <input type="text" name="" id="Sname" placeholder="Name" required formControlName="name">
+          <div class="texterr" *ngIf="contactForm.controls['name'].invalid && (contactForm.controls['name'].touched )">
+            <span>**This field is required</span>
+          </div>
+          <input type="email" name="" id="email" placeholder="Email" required formControlName="email">
+          <div class="texterr" *ngIf="contactForm.controls['email'].invalid && (contactForm.controls['email'].touched )">
+            <span>**This field is required</span>
+          </div>
+          <input type="text" name="" id="message" placeholder="Message" required formControlName="message">
+          <div class="texterr" *ngIf="contactForm.controls['message'].invalid && (contactForm.controls['message'].touched )">
+            <span>**This field is required</span>
+          </div>
+        </div>
+        <div class="send">
+          <button type="submit" class="btn btn-success">Send Message</button>
+        </div>
+        <div class="alert-1" id="alert-1">
+          Please fill the form correctly
+        </div>
+        <div class="alert-2" id="alert-2">
+          Your message has been sent
+        </div>
+      </div>
+    </form>
+    <div class="img"></div>
   </div>
-  <div class="img"></div>
-</div>
 
-<div class="for-contact-card">
-  <div class="call"></div>
-   <div class="mail"></div>
-   <div class="whatsapp"></div>
-   <div class="insta"></div>
-   <div class="twitter"></div>
-</div>
+  <div class="for-contact-card">
+    <div class="call"></div>
+    <div class="mail"></div>
+    <div class="whatsapp"></div>
+    <div class="insta"></div>
+    <div class="twitter"></div>
+  </div>
 </div>

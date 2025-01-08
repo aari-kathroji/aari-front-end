@@ -1,0 +1,19 @@
+<button routerLink="/adminStaff">Register</button>
+
+
+<div class="viewStudents">
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>UserName</th>
+            <th>Email</th>
+            <th>Password</th>
+        </tr>
+        <tr *ngFor="let student of students">
+            <td [routerLink]="['/singleView',student._id]" style="cursor: pointer;" >{{student.name}}</td>
+            <td [routerLink]="['/singleView',student._id]" style="cursor: pointer;" >{{student.userName}}</td>
+            <td>{{student.email}}</td>
+            <td>{{student.password}}</td>
+        </tr>
+    </table>
+</div>

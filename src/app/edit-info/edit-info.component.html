@@ -1,0 +1,38 @@
+<div>
+    <form action="" [formGroup]="editForm">
+        <div class="inputs">
+            <label for="name">Name: </label>
+        <input type="text" placeholder="Name" formControlName="name" id="name">
+        </div>
+        <div class="inputs">
+            <label for="email">Email: </label>
+        <input type="email" placeholder="Email" formControlName="email" id="email">
+        </div>
+        <div class="inputs">
+            <label for="userName">User Name: </label>
+        <input type="text" placeholder="User Name" formControlName="userName" id="userName">
+        </div>
+        <div class="inputs">
+            <label for="password">Password: </label>
+        <input type="password" placeholder="Password" formControlName="password" id="password">
+        </div>
+        <div class="inputs">
+            <label for="contact">Contact: </label>
+        <input type="text" placeholder="Contact" formControlName="contact" id="contact">
+        </div>
+        <div class="inputs">
+            <label for="gender">Gender: </label>
+        <input type="text" placeholder="Gender" formControlName="gender" id="gender">
+        </div>
+        <div class="inputs">
+            <label for="role">Role: </label>
+            <select name="role" formControlName="role" id="role">
+                <option value="admin">Admin</option>
+                <option value="user">User</option>
+                <option value="student">Student</option>
+            </select>
+        </div>
+    </form>
+    <button type="submit" class="btn btn-primary" (click)="onUpdate()">Update</button>
+    <button type="submit" class="btn btn-primary" (click)="onDelete()">Delete</button>
+</div>

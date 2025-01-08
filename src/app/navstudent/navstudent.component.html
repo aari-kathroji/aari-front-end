@@ -1,0 +1,11 @@
+<div class="nav bar-1" id="bar-1">
+    <div class="logo" routerLink="/home" (click)="buttonClicked(1)"></div>
+    <div class="search">
+        <input type="search" name="for-search" id="" title="for-search" class="search-bar" placeholder="Search here">
+        <button class="btn search-btn">search</button>
+    </div>
+    <button class="btn primary" routerLink="/student-course" (click)="buttonClicked(1)" [ngClass]="{'active' : actived === 1 }">Courses</button>
+    <button class="btn primary" routerLink="/student-staff" (click)="buttonClicked(2)" [ngClass]="{'active' : actived === 2 }">Staff</button>
+    <button class="btn primary" routerLink="/student-program" (click)="buttonClicked(3)" [ngClass]="{'active' : actived === 3 }">Program</button>
+    <button class="btn primary" (click)="logout()" [ngClass]="{'active' : actived === 4 }">Logout</button>
+</div>
