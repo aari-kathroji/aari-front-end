@@ -400,16 +400,17 @@
 
 <div class="timeline" id="timeline" *ngFor="let staff of staffs; let i = index">
     <div class="oneside" appScrollAnimate [index]="i">
-        <img *ngIf="i%2==0" [src]="staff.gender === 'male' || staff.gender === 'Male' 
-        ? 'http://localhost:4500/assets/image.png' 
-        : 'http://localhost:4500/assets/bride.jpg'" alt="" class="oneside-img" />
+        <img *ngIf="i%2==0" [src]="staff.gender.toLowerCase() === 'male' ?
+        staff.name === 'Vivek Vardhan Nada' ? 'http://localhost:4500/assets/Vivek.jpg' : 
+        'http://localhost:4500/assets/male.png' : 'http://localhost:4500/assets/female.jpg'" 
+        alt="" class="oneside-img" />
         <div class="description1">
             <h2 class="name">Name: {{staff.name}}</h2>
             <h4 class="desc"><b>Contact: </b>{{staff.contact}}</h4>
             <p class="desc"><b>Description: </b>{{staff.description}}</p>
         </div>
         <img *ngIf="i%2!=0" [src]="staff.gender === 'male' || staff.gender === 'Male' 
-        ? 'http://localhost:4500/assets/image.png' 
-        : 'http://localhost:4500/assets/bride.jpg'" alt="" class="oneside-img" />
+        ? 'http://localhost:4500/assets/male.png' 
+        : 'http://localhost:4500/assets/female.jpg'" alt="" class="oneside-img" />
     </div>
 </div>
