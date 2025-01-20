@@ -18,11 +18,10 @@ export class NavstudentComponent {
     this.actived = btn;
   }
   logout(){
-    localStorage.clear();
-    this.router.navigate(['/']).then(() => {
-      window.location.reload();
-    });
-    this.router.navigate(['/login']);
+    document.cookie = 'accessToken=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+    document.cookie = 'refreshToken=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+    document.cookie = 'role=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+    window.location.href = '/login';
   }
 
 }

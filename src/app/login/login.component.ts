@@ -14,9 +14,7 @@ import { Observable } from 'rxjs';
 })
 export class LoginComponent {
       login : FormGroup ;
-
       isFormSubmmited : boolean = false;
-
       constructor(private UserService : UserService,private router : Router){
         this.login = new FormGroup({
           userName : new FormControl("",[Validators.required, Validators.minLength(5)]),
@@ -46,9 +44,10 @@ export class LoginComponent {
         if (!data || Object.keys(data).length === 0) { // Check if object is empty
           alert("Invalid username or password");
         } else {
-          this.router.navigate(['/home']);
           document.cookie = `accessToken=${data.accessToken}; path=/;`;
           document.cookie = `refreshToken=${data.refreshToken}; path=/;`;
+          document.cookie = `role=${data.role}; path=/;`;
+          window.location.href = '/home';
 
         }
       }

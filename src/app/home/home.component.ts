@@ -14,10 +14,8 @@ export class HomeComponent {
   constructor() { }
 
   ngOnInit(): void {
-    
-    if(localStorage.getItem('user') && localStorage.getItem('user') !== ''){
+    if (!document.cookie.includes('role') || !document.cookie.includes('accessToken') || !document.cookie.includes('refreshToken')) {
       document.querySelector('.for-login')?.classList.add('hidden');
     }
   }
-
 }

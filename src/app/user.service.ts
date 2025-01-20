@@ -53,10 +53,11 @@ export class UserService {
     //   console.log("Data           " + data);
     // })
     // return true
-    let flag: boolean=false
+    let flag: boolean=false;
+
     this.http.post('http://localhost:4500/auth', { accessToken: accessToken, refreshToken: refreshToken }).subscribe((data: any) => {
       const resmsg = data;
-      console.log(resmsg);
+      console.log("resmsg " + resmsg);
       if (resmsg && resmsg.success === true) {
         flag = true;
       }

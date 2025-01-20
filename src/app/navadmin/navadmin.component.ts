@@ -19,11 +19,10 @@ export class NavadminComponent {
   }
 
   logout(){
-    localStorage.clear();
-    this.router.navigate(['/']).then(() => {
-      window.location.reload();
+    document.cookie.split(';').forEach(cookie => {
+      document.cookie = cookie.trim().split('=')[0] + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
     });
-    this.router.navigate(['/login']);
+    window.location.href = '/login';
   }
 
 }

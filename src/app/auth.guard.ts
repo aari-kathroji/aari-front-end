@@ -13,18 +13,19 @@ export class AuthGuard implements CanActivate {
     const cookie = document.cookie;
     const accessToken = cookie.split(';').filter(item => item.trim().startsWith('accessToken=')).map(item => item.split('=')[1])[0];
     const refreshToken = cookie.split(';').filter(item => item.trim().startsWith('refreshToken=')).map(item => item.split('=')[1])[0];
-    //this.userService.setHeaders(accessToken, refreshToken);
+    const role = cookie.split(';').filter(item => item.trim().startsWith('role=')).map(item => item.split('=')[1])[0];
     console.log(cookie);
     console.log(accessToken);
     console.log(refreshToken);
-    if (this.userService.validateUser(accessToken, refreshToken)) {
-      console.log("true");
+    console.log(role);
+    if (this.userService.validateUser(accessToken, refreshToken)!==true) {
+      console.log("Authentication successful, navigating to home.");
       return true;
     }
-    console.log("authguard");
+
+    console.log("Authentication failed, navigating to login.");
     this.router.navigate(['/login']);
     return false;
   }
-
 }
 

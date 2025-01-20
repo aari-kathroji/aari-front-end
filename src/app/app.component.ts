@@ -36,7 +36,7 @@ export class AppComponent {
   // }
     
   ngOnInit(){
-    this.role = localStorage.getItem('role');
+    this.role = document.cookie.split(';').filter(item => item.trim().startsWith('role=')).map(item => item.split('=')[1])[0];
     if(this.role === 'student'){
       document.getElementById('nav-1')?.classList.add('hidden');
       document.getElementById('nav-2')?.classList.remove('hidden');
@@ -47,7 +47,7 @@ export class AppComponent {
       document.getElementById('nav-2')?.classList.add('hidden');
       document.getElementById('nav-3')?.classList.remove('hidden');
     }
-    else{
+    else {
       document.getElementById('nav-1')?.classList.remove('hidden');
       document.getElementById('nav-2')?.classList.add('hidden');
       document.getElementById('nav-3')?.classList.add('hidden');
