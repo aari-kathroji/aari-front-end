@@ -1,7 +1,7 @@
-<button routerLink="/adminStaff">Register</button>
+<button routerLink="/register" class="btn btn-primary">Register</button>
 
 
-<div class="viewStudents">
+<!-- <div class="viewStudents">
     <table>
         <tr>
             <th>Name</th>
@@ -10,10 +10,31 @@
             <th>Password</th>
         </tr>
         <tr *ngFor="let student of students">
-            <td [routerLink]="['/singleView',student._id]" style="cursor: pointer;" >{{student.name}}</td>
-            <td [routerLink]="['/singleView',student._id]" style="cursor: pointer;" >{{student.userName}}</td>
+            <td [routerLink]="['/singleView',student._id]" style="cursor: pointer;">{{student.name}}</td>
+            <td [routerLink]="['/singleView',student._id]" style="cursor: pointer;">{{student.userName}}</td>
             <td>{{student.email}}</td>
             <td>{{student.password}}</td>
         </tr>
     </table>
+</div> -->
+
+
+<div class="card-container">
+    <div class="card" style="width: 18rem;" *ngFor="let student of students">
+        <img [src]="student.gender.toLowerCase() === 'male' ? 'http://localhost:4500/assets/Male.jpg' : (student.gender.toLowerCase() === 'female' ? 'http://localhost:4500/assets/Female_copy.jpg' : '...')"
+            class="card-img-top" alt="Error loading image">
+        <div class="card-body">
+            <h5 class="card-title">{{student.name}}</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Email : {{student.email}}</li>
+            <li class="list-group-item">Phone : {{student.contact}}</li>
+            <li class="list-group-item">Gender : {{student.gender}}</li>
+        </ul>
+        <div class="card-body">
+            <button type="button" class="btn btn-primary" [routerLink]="['/singleView',student._id]">View</button>
+            <button type="button" class="btn btn-primary" [routerLink]="['/edit',student._id]">Edit</button>
+            <button type="button" class="btn btn-danger btn-delete" (click)="deleteStudent(student._id)">Delete</button>
+        </div>
+    </div>
 </div>

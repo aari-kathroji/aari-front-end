@@ -1,25 +1,39 @@
 <div class="container">
-    <div class="image">
-        <img [src]="student.gender === 'male'|| student.gender === 'Male' ? 'http://localhost:4500/assets/image.png' : 'http://localhost:4500/assets/bride.jpg'" alt="">
-    </div>
-    <div class="name">
-        Name: {{student.name}}
-    </div>
-    <div class="username">
-        User Name: {{student.userName}}
-    </div>
-    <div class="email">
-        Email: {{student.email}}
-    </div>
-    <div class="password">
-        Password: {{student.password}}
-    </div>
-    <div style="padding: 5px; border-radius:25px" *ngIf="student.gender" [style.background-color]="student.gender === 'male'|| student.gender === 'Male' ? '#ADD8E6' : '#FFC0CB'" >
-        Gender: {{student.gender}}
-    </div>
-    <div class="contact">
-        Contact: {{student.contact}}
+    <div class="row">
+        <div class="col-md-6">
+            <div class="image">
+                <img [src]="student.gender === 'male'|| student.gender === 'Male' ? 'http://localhost:4500/assets/Male.jpg' : 'http://localhost:4500/assets/Female_copy.jpg'" alt="" style="box-shadow: 10px 10px 5px #888888; border: 2px solid #000000;">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h2>Student Details</h2>
+            <table class="table table-striped">
+                <tr>
+                    <td class="name">Name:</td>
+                    <td>{{student.name}}</td>
+                </tr>
+                <tr>
+                    <td class="username">User Name:</td>
+                    <td>{{student.userName}}</td>
+                </tr>
+                <tr>
+                    <td class="email">Email:</td>
+                    <td>{{student.email}}</td>
+                </tr>
+                <tr *ngIf="student.gender">
+                    <td class="gender">Gender:</td>
+                    <td class="gender" [style.background-color]="student.gender === 'male'|| student.gender === 'Male' ? '#ADD8E6' : '#FFC0CB'">{{student.gender}}</td>
+                </tr>
+                <tr>
+                    <td class="contact">Contact:</td>
+                    <td>{{student.contact}}</td>
+                </tr>
+            </table>
+        </div>
     </div>
 </div>
-<button class="back" routerLink="/admin-view-students">Back</button>
-<button [routerLink]="['/edit',student._id]"> Edit</button>
+<div class="button-container">
+    <button class="back" [routerLink]="['/admin-view-students']">Back</button>
+    <button [routerLink]="['/edit',student._id]"> Edit</button>
+    <button class="delete" [routerLink]="['/delete',student._id]"> Delete</button>
+</div>

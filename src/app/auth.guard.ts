@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, Router, ActivatedRouteSnapshot } from '@angular/router';
 import { UserService } from './user.service';
-
+import * as CryptoJS from 'crypto-js';
 @Injectable({
   providedIn: 'root'
 })
@@ -18,14 +18,17 @@ export class AuthGuard implements CanActivate {
     console.log(accessToken);
     console.log(refreshToken);
     console.log(role);
-    if (this.userService.validateUser(accessToken, refreshToken)!==true) {
+    const decryptedRole = CryptoJS.AES.decrypt(role, 'secret key 123').toString(CryptoJS.enc.Utf8);
+    if (this.userService.validateUser(accessToken, refreshToken,decryptedRole)) {
       console.log("Authentication successful, navigating to home.");
+      window.location.href = "/home";
       return true;
     }
-
-    console.log("Authentication failed, navigating to login.");
-    this.router.navigate(['/login']);
-    return false;
+    else{
+      console.log("Authentication failed, navigating to login.");
+      window.location.href = "/login";
+      return false;
+    }
   }
 }
 

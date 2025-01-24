@@ -26,6 +26,7 @@ export class EditInfoComponent {
     let id = this.router.activatedRoute.snapshot.paramMap.get('_id');
     if (confirm("Are you sure you want to update?")) {
       this.userService.updateUser(id, this.editForm.value).subscribe((data: any) => {
+        console.log(data.batch)
       });
       this.router1.navigate(['admin-view-students']);
     }

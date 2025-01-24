@@ -26,3 +26,18 @@ td{
     align-items: center;
     background-size: 100vw 100vh;
 }
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    flex: 0 0 calc(25% - 1em); /* 25% width with 1em margin */
+    margin: 0.5em;
+}
+
+.card-body button {
+    margin: 2px;
+    justify-content: space-between;    
+}

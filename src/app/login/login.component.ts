@@ -4,6 +4,8 @@ import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } 
 import { RouterLink, RouterModule , Router} from '@angular/router';
 import { UserService } from '../user.service';
 import { Observable } from 'rxjs';
+import * as CryptoJS from 'crypto-js';
+
 
 @Component({
   selector: 'app-login',
@@ -22,7 +24,11 @@ export class LoginComponent {
           role: new FormControl("",[Validators.required])
         })
       }
-
+      ngOnInit(){
+        if(document.cookie.split(';').find(c => c.trim().startsWith('accessToken='))?.split('=')[1]){
+          window.location.href = "/home";
+        }
+      }
       passwordValidation(control : FormControl): {[s : string] : boolean} | null{
         if(/\s/.test(control.value) || /[!@#$%^&*(),.?":{}|<>]/.test(control.value)){
           return {'InvalidPassword' : true}
@@ -46,9 +52,7 @@ export class LoginComponent {
         } else {
           document.cookie = `accessToken=${data.accessToken}; path=/;`;
           document.cookie = `refreshToken=${data.refreshToken}; path=/;`;
-          document.cookie = `role=${data.role}; path=/;`;
           window.location.href = '/home';
-
         }
       }
       catch (error) {

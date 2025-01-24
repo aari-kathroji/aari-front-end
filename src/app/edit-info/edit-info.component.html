@@ -1,38 +1,49 @@
-<div>
+<div class="edit-form">
     <form action="" [formGroup]="editForm">
-        <div class="inputs">
+        <div class="form-group">
             <label for="name">Name: </label>
-        <input type="text" placeholder="Name" formControlName="name" id="name">
+            <input type="text" class="form-control" placeholder="Name" formControlName="name" id="name" [value]="editForm.get('name')?.value">
         </div>
-        <div class="inputs">
+        <div class="form-group">
             <label for="email">Email: </label>
-        <input type="email" placeholder="Email" formControlName="email" id="email">
+            <input type="email" class="form-control" placeholder="Email" formControlName="email" id="email">
         </div>
-        <div class="inputs">
+        <div class="form-group">
             <label for="userName">User Name: </label>
-        <input type="text" placeholder="User Name" formControlName="userName" id="userName">
+            <input type="text" class="form-control" placeholder="User Name" formControlName="userName" id="userName">
         </div>
-        <div class="inputs">
+        <div class="form-group">
             <label for="password">Password: </label>
-        <input type="password" placeholder="Password" formControlName="password" id="password">
+            <input type="password" class="form-control" placeholder="Password" formControlName="password" id="password">
         </div>
-        <div class="inputs">
+        <div class="form-group">
             <label for="contact">Contact: </label>
-        <input type="text" placeholder="Contact" formControlName="contact" id="contact">
+            <input type="text" class="form-control" placeholder="Contact" formControlName="contact" id="contact">
         </div>
-        <div class="inputs">
+        <div class="form-group">
             <label for="gender">Gender: </label>
-        <input type="text" placeholder="Gender" formControlName="gender" id="gender">
+            <input type="text" class="form-control" placeholder="Gender" formControlName="gender" id="gender">
         </div>
-        <div class="inputs">
+        <div class="form-group">
             <label for="role">Role: </label>
-            <select name="role" formControlName="role" id="role">
+            <select name="role" class="form-control" formControlName="role" id="role">
                 <option value="admin">Admin</option>
                 <option value="user">User</option>
                 <option value="student">Student</option>
             </select>
         </div>
+        <div class="form-group">
+            <label for="batches">Batches: </label>
+            <select name="batches" class="form-control" formControlName="batch" id="batches">
+                <option value="6pm">6pm</option>
+                <option value="7pm">7pm</option>
+                <option value="8pm">8pm</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <p style="color: red;">No batch is chosen</p>
+        </div>
     </form>
-    <button type="submit" class="btn btn-primary" (click)="onUpdate()">Update</button>
-    <button type="submit" class="btn btn-primary" (click)="onDelete()">Delete</button>
+    <button type="submit" class="btn btn-primary update-btn" (click)="onUpdate()">Update</button>
+    <button type="submit" class="btn btn-primary delete-btn" (click)="onDelete()">Delete</button>
 </div>

@@ -15,9 +15,7 @@ export class UserService {
     console.log("User           " + user)
     // const userJson = JSON.stringify(user);
     // console.log("UserJson       " + userJson)
-    this.http.post('http://localhost:4500/user', user).subscribe((data: any) => {
-      console.log("Data           " + data);
-    })
+    return this.http.post('http://localhost:4500/user', user)
 
   }
   getSingleUser(_id: any) {
@@ -43,27 +41,11 @@ export class UserService {
     console.log("User           " + _id)
     return this.http.delete('http://localhost:4500/user/' + _id)
   }
-  validateUser(accessToken: any, refreshToken: any) {
-    // const headers = new HttpHeaders({
-    //   'Content-Type': 'application/json', // Set Content-Type header
-    //   'Authorization': 'Bearer your-jwt-token', // Set Authorization header (e.g., JWT token)
-    //   'Custom-Header': 'some-value'  // Custom header
-    // });
-    // this.http.post('http://localhost:4500/auth', { headers: headers }).subscribe((data: any) => {
-    //   console.log("Data           " + data);
-    // })
-    // return true
-    let flag: boolean=false;
-
-    this.http.post('http://localhost:4500/auth', { accessToken: accessToken, refreshToken: refreshToken }).subscribe((data: any) => {
-      const resmsg = data;
-      console.log("resmsg " + resmsg);
-      if (resmsg && resmsg.success === true) {
-        flag = true;
-      }
-    })
-    return flag
-
-
+  validateUser(accessToken: string, refreshToken: string, role: string) {
+    return this.http.post('http://localhost:4500/auth', {
+      accessToken,
+      refreshToken,
+      role
+    });
   }
 }

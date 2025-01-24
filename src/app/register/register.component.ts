@@ -43,7 +43,8 @@ export class RegisterComponent {
           userName: new FormControl(""),
           role: new FormControl(""),
           gender: new FormControl(""),
-          contact: new FormControl("")
+          contact: new FormControl(""),
+          batch: new FormControl("")
         })
       }
       onCheckboxChange(event: any) {
@@ -55,13 +56,18 @@ export class RegisterComponent {
         }
       }
       onSubmit(){
-        if((this.checkBoxValue==true)){
-    
-          console.log(this.adminRegister.value);
-          this.userService.addUser(this.adminRegister.value);
-          this.router1.navigate(['/login']);
-        }
-        else{
+        if(this.checkBoxValue){
+          this.userService.addUser(this.adminRegister.value).subscribe(
+            (response: any) => {
+              // If user added successfully
+              window.location.href = '/login';
+            },
+            (error: any) => {
+              // Handle error case
+              alert('Registration failed. Please try again.');
+            }
+          );
+        } else {
           alert("Please accept terms and conditions");
         }
       }

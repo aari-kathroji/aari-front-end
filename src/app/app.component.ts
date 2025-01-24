@@ -6,6 +6,9 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { RoleService } from './role.service';
 import { NavstudentComponent } from './navstudent/navstudent.component';
 import { NavadminComponent } from './navadmin/navadmin.component';
+import { UserService } from './user.service';
+import * as CryptoJS from 'crypto-js';
+import { jwtDecode } from 'jwt-decode';
 
 @Component({
   selector: 'app-root',
@@ -35,22 +38,48 @@ export class AppComponent {
   //   });
   // }
     
+  userService = inject(UserService);
+  roleService = inject(RoleService);
   ngOnInit(){
-    this.role = document.cookie.split(';').filter(item => item.trim().startsWith('role=')).map(item => item.split('=')[1])[0];
-    if(this.role === 'student'){
-      document.getElementById('nav-1')?.classList.add('hidden');
-      document.getElementById('nav-2')?.classList.remove('hidden');
-      document.getElementById('nav-3')?.classList.add('hidden');
+    const accessToken = document.cookie.split(';').find(c => c.trim().startsWith('accessToken='))?.split('=')[1] ?? '';
+    const refreshToken = document.cookie.split(';').find(c => c.trim().startsWith('refreshToken='))?.split('=')[1] ?? '';
+    let getRole;
+    try {
+      getRole = jwtDecode(accessToken);
+    } catch (error) {
+      console.log('Invalid access token');
     }
-    else if(this.role === 'admin'){
-      document.getElementById('nav-1')?.classList.add('hidden');
-      document.getElementById('nav-2')?.classList.add('hidden');
-      document.getElementById('nav-3')?.classList.remove('hidden');
+    if(getRole && 'role' in getRole){
+      this.role = getRole.role;
     }
-    else {
-      document.getElementById('nav-1')?.classList.remove('hidden');
-      document.getElementById('nav-2')?.classList.add('hidden');
-      document.getElementById('nav-3')?.classList.add('hidden');
+    if (accessToken && refreshToken && this.role) {
+      this.userService.validateUser(accessToken, refreshToken, this.role).subscribe((data: any) => {
+        if (data && data.success==true) {
+          if(this.role === "3"){
+            document.getElementById('nav-1')?.classList.add('hidden');
+            document.getElementById('nav-2')?.classList.remove('hidden');
+            document.getElementById('nav-3')?.classList.add('hidden');
+          }
+          else if(this.role === "1" || this.role === "2"){
+            document.getElementById('nav-1')?.classList.add('hidden');
+            document.getElementById('nav-2')?.classList.add('hidden');
+            document.getElementById('nav-3')?.classList.remove('hidden');
+          }
+          else {
+            document.getElementById('nav-1')?.classList.remove('hidden');
+            document.getElementById('nav-2')?.classList.add('hidden');
+            document.getElementById('nav-3')?.classList.add('hidden');
+          }
+        } 
+      });
+    } else {
+      this.userService.validateUser(accessToken, refreshToken, this.role).subscribe((data: any) => {
+        if (data && data.success==false) {
+          document.getElementById('nav-1')?.classList.remove('hidden');
+          document.getElementById('nav-2')?.classList.add('hidden');
+          document.getElementById('nav-3')?.classList.add('hidden');
+        }
+      });
     }
   }
 }

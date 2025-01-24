@@ -19,5 +19,10 @@ export class AdminViewStudentsComponent {
       this.students = data;
     })
   }
-
+  deleteStudent(id: any){
+    this.userService.deleteUser(id).subscribe((data: any) => {
+      this.students = this.students.filter((student) => student._id !== id);
+    })
+    window.location.reload();
+  }
 }

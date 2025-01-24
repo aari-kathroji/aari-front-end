@@ -1,47 +1,126 @@
-.container{
+.container {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 100%;
     justify-content: center;
     align-items: center;
-    margin-top: 4vw;
-}
-.name{
-    font-size: 3vw;
-    font-weight: 600;
-    margin-top: 5px;
-}
-.username{
-    font-size: 2vw;
-    margin-top: 5px;
-    font-weight: 600;
+    height: 85.5vh;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="50"><text x="0" y="40" font-size="25" fill="black">AARI INSTITUTE</text></svg>');
+    background-repeat: repeat;
+    background-size: auto;
 }
 
-.email{
-    font-size: 2vw;
-    margin-top: 5px;
-    font-weight: 600;
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 80%;
+    background-color: #f0f0f0;
+    border: 1px solid #ffffff;
+    border-radius: 7.5px;
+    box-shadow: 0 0 50px rgba(0, 1, 0, 1);
 }
-.password{
-    font-size: 2vw;
-    margin-top: 5px;
-    font-weight: 600;
+
+.col-md-6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
 }
-.gender{
-    font-size: 2vw;
-    margin-top: 5px;
-    font-weight: 600;
+
+.image img {
+    width: 400px;
+    /* Increased image size */
+    height: 400px;
+    /* Increased image size */
+    border-radius: 50%;
+    object-fit: cover;
 }
-.contact{
-    font-size: 2vw;
-    padding:5px;
-    margin-top: 5px;
-    font-weight: 600;
-    background-color:rgb(243, 231, 11);
+
+.name,
+.username,
+.email,
+.password,
+.contact {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.gender {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+    padding: 5px;
     border-radius: 25px;
 }
-img{
-    border-radius: 50%;
-    height: 20vw;
+
+.gender[style*="background-color: #ADD8E6"] {
+    background-color: #ADD8E6;
+}
+
+.gender[style*="background-color: #FFC0CB"] {
+    background-color: #FFC0CB;
+}
+
+.back,
+button {
+    margin: 20px 0;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.back {
+    margin-right: 10px;
+}
+
+.update-btn,
+.delete-btn {
+    margin-left: 10px;
+}
+
+.table-container {
+    margin: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td {
+    padding: 10px;
+    border: 2px solid #ccc;
+}
+
+td.name {
+    font-weight: bold;
+}
+
+td.gender {
+    font-weight: bold;
+}
+
+td.gender[style] {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+td.gender[style*="#ADD8E6"] {
+    background-color: #ADD8E6;
+}
+
+td.gender[style*="#FFC0CB"] {
+    background-color: #FFC0CB;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
