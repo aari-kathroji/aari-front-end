@@ -3,7 +3,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { BatchService } from '../../services/batch.service';
 import { error } from 'console';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { AddBatchComponent } from './add-batch/add-batch.component';
+import { AddBatchComponent } from '../add-batch/add-batch.component';
 import { EditBatchComponent } from './edit-batch/edit-batch.component';
 import {MatDialog, MatDialogModule} from '@angular/material/dialog';
 

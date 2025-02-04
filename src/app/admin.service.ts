@@ -16,4 +16,10 @@ export class AdminService {
       console.log("Data           " + data);
     })
   }
+
+  viewBatch(){
+    this.http.get('http://localhost:4500/batch').subscribe((data: any) => {
+      console.log("Batch          " + data);
+    })
+  }
 }
