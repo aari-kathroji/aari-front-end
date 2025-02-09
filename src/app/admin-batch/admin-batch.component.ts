@@ -4,8 +4,9 @@ import { BatchService } from '../../services/batch.service';
 import { error } from 'console';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { AddBatchComponent } from '../add-batch/add-batch.component';
-import { EditBatchComponent } from './edit-batch/edit-batch.component';
-import {MatDialog, MatDialogModule} from '@angular/material/dialog';
+// import { AddBatchComponent } from '../add-batch/add-batch.component';
+// import { EditBatchComponent } from './edit-batch/edit-batch.component';
+// import {MatDialog, MatDialogModule} from '@angular/material/dialog';
 
 export interface Batch {
   id: string;
@@ -17,7 +18,8 @@ export interface Batch {
 @Component({
   selector: 'app-admin-batch',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, AddBatchComponent, EditBatchComponent,MatDialogModule],
+  imports: [],
+  //CommonModule, ReactiveFormsModule, AddBatchComponent, EditBatchComponent,MatDialogModule
   templateUrl: './admin-batch.component.html',
   styleUrl: './admin-batch.component.css'
 })
@@ -45,7 +47,7 @@ export class AdminBatchComponent implements OnInit{
   constructor(
     private fb : FormBuilder ,
     private batchService: BatchService,
-    private dialog : MatDialog,
+    // private dialog : MatDialog
   ){}
 
   ngOnInit() {
@@ -66,24 +68,24 @@ export class AdminBatchComponent implements OnInit{
     );
   }
 
-    addBatch(){
-      const dialogRef = this.dialog.open(AddBatchComponent);
+    // addBatch(){
+    //   const dialogRef = this.dialog.open(AddBatchComponent);
 
-      dialogRef.afterClosed().subscribe(() => {
-        this.loadBatches();
-      });
-    }
+    //   dialogRef.afterClosed().subscribe(() => {
+    //     this.loadBatches();
+    //   });
+    // }
     
 
-    editBatch(batch : Batch){
-      const dialogRef = this.dialog.open(AddBatchComponent,{
-        data : {batch : batch, edit : true},
-      });
+    // editBatch(batch : Batch){
+    //   const dialogRef = this.dialog.open(AddBatchComponent,{
+    //     data : {batch : batch, edit : true},
+    //   });
 
-      dialogRef.afterClosed().subscribe(()=>{
-        this.loadBatches();
-      })
-    }
+    //   dialogRef.afterClosed().subscribe(()=>{
+    //     this.loadBatches();
+    //   })
+    // }
 
   deleteBatch(id:string){
     alert('Are you sure you want to delete the field');

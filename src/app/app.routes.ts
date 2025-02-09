@@ -18,6 +18,7 @@ import { SingleViewComponent } from './single-view/single-view.component';
 import { EditInfoComponent } from './edit-info/edit-info.component';
 import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './auth.guard';
+import { BatchStudentsComponent } from './batch-students/batch-students.component';
 
 export const routes: Routes = [
     {
@@ -59,8 +60,7 @@ export const routes: Routes = [
     },
     {
         path :'student-staff', component : StudentstaffComponent
-    }
-    ,
+    },
     {
         path :'student-program', component : StudentprogramComponent
     },
@@ -77,11 +77,15 @@ export const routes: Routes = [
         path: 'admin-view-students',component: AdminViewStudentsComponent
     },
     {
+        path: 'batch-students/:_id',component: BatchStudentsComponent
+    },
+    {
         path: 'singleView/:_id',component: SingleViewComponent
     },
     {
         path: 'edit/:_id',component: EditInfoComponent
-    }
+    },
+    
 
 
 ];

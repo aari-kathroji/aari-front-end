@@ -44,7 +44,7 @@ export class RegisterComponent {
           role: new FormControl(""),
           gender: new FormControl(""),
           contact: new FormControl(""),
-          batch: new FormControl("")
+          batch_id: new FormControl("-1")
         })
       }
       onCheckboxChange(event: any) {

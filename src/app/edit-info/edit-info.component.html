@@ -1,5 +1,14 @@
 <div class="edit-form">
+    <h2>Edit Student Details</h2>
     <form action="" [formGroup]="editForm">
+        <div class="col-md-6">
+            <div class="image">
+                <img [src]="editForm.get('gender')?.value?.toLowerCase() === 'male' ? 'http://localhost:4500/assets/Male.jpg' : 'http://localhost:4500/assets/Female_copy.jpg'" 
+                     alt="Student profile image" 
+                     style="box-shadow: 10px 10px 5px #888888; border: 2px solid #000000;">
+            </div>
+        </div>
+
         <div class="form-group">
             <label for="name">Name: </label>
             <input type="text" class="form-control" placeholder="Name" formControlName="name" id="name" [value]="editForm.get('name')?.value">
@@ -22,7 +31,12 @@
         </div>
         <div class="form-group">
             <label for="gender">Gender: </label>
-            <input type="text" class="form-control" placeholder="Gender" formControlName="gender" id="gender">
+            <select class="form-control" formControlName="gender" id="gender">
+                <option value="" disabled>Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
         </div>
         <div class="form-group">
             <label for="role">Role: </label>
@@ -34,16 +48,18 @@
         </div>
         <div class="form-group">
             <label for="batches">Batches: </label>
-            <select name="batches" class="form-control" formControlName="batch" id="batches">
+            <select name="batch_id" class="form-control" formControlName="batch_id" id="batch_id">
                 <option value="67a0deeae5ad3310ec16c924">6pm</option>
                 <option value="67a0df37e5ad3310ec16c926">7pm</option>
                 <option value="67a0df3ce5ad3310ec16c928">8pm</option>
             </select>
         </div>
-        <div class="form-group">
+        <!-- <div class="form-group">
             <p style="color: red;">No batch is chosen</p>
-        </div>
+        </div> -->
     </form>
-    <button type="submit" class="btn btn-primary update-btn" (click)="onUpdate()">Update</button>
-    <button type="submit" class="btn btn-primary delete-btn" (click)="onDelete()">Delete</button>
+    <div class="button-group">
+        <button type="submit" class="btn update-btn" (click)="onUpdate()">Update</button>
+        <button type="submit" class="btn delete-btn" (click)="onDelete()">Delete</button>
+    </div>
 </div>

@@ -1,23 +1,4 @@
-<button routerLink="/register" class="btn btn-primary">Register</button>
-
-
-<!-- <div class="viewStudents">
-    <table>
-        <tr>
-            <th>Name</th>
-            <th>UserName</th>
-            <th>Email</th>
-            <th>Password</th>
-        </tr>
-        <tr *ngFor="let student of students">
-            <td [routerLink]="['/singleView',student._id]" style="cursor: pointer;">{{student.name}}</td>
-            <td [routerLink]="['/singleView',student._id]" style="cursor: pointer;">{{student.userName}}</td>
-            <td>{{student.email}}</td>
-            <td>{{student.password}}</td>
-        </tr>
-    </table>
-</div> -->
-
+<button class="btn btn-primary" [routerLink]="['/admin-batch']">Back</button>
 
 <div class="card-container">
     <div class="card" style="width: 18rem;" *ngFor="let student of students">
@@ -33,8 +14,6 @@
         </ul>
         <div class="card-body">
             <button type="button" class="btn btn-primary" [routerLink]="['/singleView',student._id]">View</button>
-            <button type="button" class="btn btn-primary edit-btn" [routerLink]="['/edit',student._id]">Edit</button>
-            <button type="button" class="btn btn-danger btn-delete" (click)="deleteStudent(student._id)">Delete</button>
         </div>
     </div>
 </div>

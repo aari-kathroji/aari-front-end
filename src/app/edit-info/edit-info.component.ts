@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Form, FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterLink, RouterModule, RouterOutlet, Router} from '@angular/router';
 import { UserService } from '../user.service';
 
@@ -12,12 +12,22 @@ import { UserService } from '../user.service';
   styleUrl: './edit-info.component.css'
 })
 export class EditInfoComponent {
-  editForm : any
+  
+  editForm:FormGroup  = new FormGroup({
+    name: new FormControl(""),
+    email: new FormControl(""),
+    password: new FormControl(""),
+    userName: new FormControl(""),
+    role: new FormControl(""),
+    gender: new FormControl(""),
+    contact: new FormControl(""),
+    batch_id: new FormControl("")
+  })
   constructor(private userService: UserService, private router: RouterOutlet,private fb : FormBuilder,private router1 : Router) { }
   ngOnInit(){
     let id = this.router.activatedRoute.snapshot.paramMap.get('_id');
     this.userService.getSingleUser(id).subscribe((data)=>{
-      console.log(data)
+      //console.log(data)
       this.editForm = this.fb.group(data);
     })
   }
@@ -25,6 +35,8 @@ export class EditInfoComponent {
   onUpdate() {
     let id = this.router.activatedRoute.snapshot.paramMap.get('_id');
     if (confirm("Are you sure you want to update?")) {
+      console.log("Hello")
+      console.log(this.editForm.value)
       this.userService.updateUser(id, this.editForm.value).subscribe((data: any) => {
         console.log(data.batch)
       });

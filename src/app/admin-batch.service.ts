@@ -8,13 +8,8 @@ export class AdminBatchService {
 
   constructor(private http: HttpClient) { }
 
-  getBatch(){
-    return this.http.get('http://localhost:4500/')
-  }
-  getBatch7PM(){
-    return this.http.get('http://localhost:4500/')
-  }
-  getBatch8PM(){
-    return this.http.get('http://localhost:4500/')
+  getBatch(batch_id: string) {
+    console.log(batch_id);
+    return this.http.get('http://localhost:4500/user/studentsByBatch/' + batch_id);
   }
 }

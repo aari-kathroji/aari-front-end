@@ -3,6 +3,8 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     height: 5vw;
+    background: linear-gradient(145deg, #fff3e6 0%, #ffe9d6 100%);
+    box-shadow: 0 0.2vw 1vw rgba(0,0,0,0.1);
     /* background-color: rgb(246, 140, 74); */
     /* border: 1px solid black; */
 }
@@ -19,6 +21,7 @@
     background-size: contain;
     background-size: 12vw;
     background-position: -2vw -0.5vw;
+    filter: drop-shadow(0.2vw 0.2vw 0.5vw rgba(255, 120, 0, 0.2));
 }
 button:focus {
     outline: none;
@@ -26,19 +29,30 @@ button:focus {
 }
 .primary{
     border-color: transparent;
-    border-radius:0vw;
+    border-radius:0.3vw;
     text-align: center;
-    /* color: rgb(255, 255, 255); */
-    font-size: 1.5vw;
+    font-size: 1.2rem;
     width: 9.5vw;
     height: 4vw;
     transition: all 0.2s ease;
+    background: linear-gradient(to bottom, #ffffff 0%, #fff5e6 100%);
+    box-shadow: 0 0.2vw 0.5vw rgba(0,0,0,0.1);
+    color: #ff6a00;
+    margin-right: 1vw;
 }
 
+.primary:last-child {
+    margin-right: 0;
+}
+
+.primary:hover {
+    transform: translateY(-0.1vw);
+    box-shadow: 0 0.4vw 0.8vw rgba(255, 106, 0, 0.2);
+}
 
 .primary.active{
-    background-color: rgb(255, 77, 0);
-    box-shadow: 0.1vw 0.1vw 0.5vw rgb(240, 121, 35) ;
+    background: linear-gradient(to bottom, #ff5500 0%, #ff6a00 100%);
+    box-shadow: 0 0.3vw 0.8vw rgba(255, 106, 0, 0.3);
     color: white;
 }
 
@@ -49,6 +63,7 @@ button:focus {
     align-items: center;
     width: 30vw;
     /* border: 1px solid black; */
+    margin-right: 2vw;  /* Add spacing after search section */
 }
 input{
     outline: none;
@@ -59,14 +74,18 @@ input:focus{
 .search-bar{
     width: 70vw;
     height: 4vw;
-    /* border-radius: 1.5vw 0vw 0vw 1.5vw; */
-    border: 1px solid orange;
+    border: 0.15vw solid #ffd1b3;
     background-color: white;
-    text-align: center;
-    margin-right: 0.5vw;
     text-align: left;
     padding-left: 1vw;
-    font-size: 1.3vw;
+    font-size: 1.1rem;
+    border-radius: 0.5vw;
+    transition: all 0.3s ease;
+}
+
+.search-bar:focus {
+    border-color: #ff6a00;
+    box-shadow: 0 0 0.8vw rgba(255, 106, 0, 0.2);
 }
 
 button:focus{
@@ -74,13 +93,100 @@ button:focus{
 }
 .search-btn{
     height: 4vw;
-    border-radius: 0vw;
-    font-size: 1w;
+    border-radius: 0.5vw;
+    font-size: 1.1rem;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
-    background-color: rgb(255, 123, 0);
-    border-color: orange;
-    margin-right: 1vw;
+    background: linear-gradient(to bottom, #ff6a00 0%, #ff5500 100%);
+    border: none;
+    padding: 0 1.5vw;
+    transition: all 0.2s ease;
+}
+
+.search-btn:hover {
+    transform: translateY(-0.1vw);
+    box-shadow: 0 0.3vw 0.8vw rgba(255, 106, 0, 0.3);
+}
+
+/* Add these new styles */
+.goodbye-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: none; /* Remove automatic fade */
+}
+
+.goodbye-content {
+    text-align: center;
+}
+
+.countdown-timer {
+    font-size: 1.5rem;
+    color: #ff6a00;
+    margin-bottom: 1rem;
+}
+
+.cancel-btn {
+    margin-top: 2rem;
+    padding: 0.8rem 2rem;
+    color: #ff6a00;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+    background: none;
+    border: 1px solid #ff6a00;
+}
+
+.progress-fill {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255, 106, 0, 0.2));
+    transition: width 0.1s linear;
+    z-index: 0;
+}
+
+.timer-text {
+    position: relative;
+    z-index: 1;
+    margin-right: 1rem;
+}
+
+.cancel-text {
+    position: relative;
+    z-index: 1;
+}
+
+.cancel-btn:hover {
+    background: rgba(255, 106, 0, 0.1);
+}
+
+.cancel-btn:hover .progress-fill {
+    background: linear-gradient(to right, transparent, rgba(255, 106, 0, 0.3));
+}
+
+.goodbye-message {
+    font-size: 2.5rem;
+    color: #ff6a00;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
 }
