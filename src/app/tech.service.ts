@@ -9,6 +9,6 @@ export class TechService {
   constructor(private http: HttpClient) { }
 
   getAllTechs() {
-    return this.http.get('http://localhost:4500/tech');
+    return this.http.get('http://localhost:4500/techstack');
   }
 }

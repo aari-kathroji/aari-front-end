@@ -1,6 +1,6 @@
 import {
   DOCUMENT
-} from "./chunk-ZCPZGPVQ.js";
+} from "./chunk-QOM64K4O.js";
 import {
   ANIMATION_MODULE_TYPE,
   Inject,
@@ -12,8 +12,7 @@ import {
   setClassMetadata,
   ɵɵdefineInjectable,
   ɵɵinject
-} from "./chunk-UZUZA7IN.js";
-import "./chunk-AOF462FV.js";
+} from "./chunk-APMNFYV2.js";
 import "./chunk-J4B6MK7R.js";
 
 // node_modules/@angular/animations/fesm2022/animations.mjs
