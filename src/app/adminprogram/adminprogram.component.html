@@ -1,1 +1,49 @@
 <p>adminprogram works!</p>
+
+<form action="" [formGroup]="programForm">
+    <input type="text" id="course_name" placeholder="Enter the course name" formControlName="course_name">
+    <label for="course_name"></label><br>
+    <input type="checkbox" id="1" [value]="1" (change)="onCheckboxChange($event)">
+    <label for="1">Programming Fundamentals</label><br>
+    <input type="checkbox" id="2" [value]="2" (change)="onCheckboxChange($event)">
+    <label for="2">Core Java</label><br>
+    <input type="checkbox" id="3" [value]="3" (change)="onCheckboxChange($event)">
+    <label for="3">Selenium</label><br>
+    <input type="checkbox" id="4" [value]="4" (change)="onCheckboxChange($event)">
+    <label for="4">HTML</label><br>
+    <input type="checkbox" id="5" [value]="5" (change)="onCheckboxChange($event)">
+    <label for="5">CSS</label><br>
+    <input type="checkbox" id="6" [value]="6" (change)="onCheckboxChange($event)">
+    <label for="6">Bootstrap</label><br>
+    <input type="checkbox" id="7" [value]="7" (change)="onCheckboxChange($event)">
+    <label for="7">JavaScript</label><br>
+    <input type="checkbox" id="8" [value]="8" (change)="onCheckboxChange($event)">
+    <label for="8">NodeJs</label><br>
+    <input type="checkbox" id="9" [value]="9" (change)="onCheckboxChange($event)">
+    <label for="9">TypeScript</label><br>
+    <input type="checkbox" id="10" [value]="10" (change)="onCheckboxChange($event)">
+    <label for="10">Angular</label><br>
+    <input type="checkbox" id="11" [value]="11" (change)="onCheckboxChange($event)">
+    <label for="11">MySQL</label><br>
+    <input type="checkbox" id="12" [value]="12" (change)="onCheckboxChange($event)">
+    <label for="12">MongoDB</label><br>
+    <input type="checkbox" id="13" [value]="13" (change)="onCheckboxChange($event)">
+    <label for="13">Python</label><br>
+    <input type="checkbox" id="14" [value]="14" (change)="onCheckboxChange($event)">
+    <label for="14">DS with Python</label><br>
+    <label for="staff">Choose the staff</label><br>
+    <select name="staff" id="staff" formControlName="staff_id">
+        <option value="" selected hidden disabled></option>
+        <option value="1">Staff - 1</option>
+        <option value="2">Staff -2 </option>
+        <option value="3">Staff-3</option>
+    </select><br>
+    <label for="batch">Choose the batch</label><br>
+    <select name="batch" id="batch" formControlName="batch_id">
+        <option value="" selected hidden disabled></option>
+        <option value="1">6PM</option>
+        <option value="2">7PM</option>
+        <option value="3">8PM</option>
+    </select><br>
+    <button type="submit" (click)="submit()">Submit</button>
+</form>

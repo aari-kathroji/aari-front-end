@@ -44,6 +44,7 @@ export class LoginComponent {
         return true;
       }
   onSubmit() {
+    console.log(this.login.value);
     this.UserService.loginUser(this.login.value).subscribe((data: any) => {
       try {
         console.log(data);

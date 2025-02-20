@@ -2,10 +2,21 @@
     <div class="logo" routerLink="/home" (click)="buttonClicked(1)"></div>
     <div class="search">
         <input type="search" name="for-search" id="" title="for-search" class="search-bar" placeholder="Search here">
-        <button class="btn search-btn">search</button>
+        <button class="btn search-btn">Search</button>
     </div>
     <button class="btn primary" routerLink="/student-course" (click)="buttonClicked(1)" [ngClass]="{'active' : actived === 1 }">Courses</button>
     <button class="btn primary" routerLink="/student-staff" (click)="buttonClicked(2)" [ngClass]="{'active' : actived === 2 }">Staff</button>
     <button class="btn primary" routerLink="/student-program" (click)="buttonClicked(3)" [ngClass]="{'active' : actived === 3 }">Program</button>
     <button class="btn primary" (click)="logout()" [ngClass]="{'active' : actived === 4 }">Logout</button>
+</div>
+
+<div *ngIf="showGoodbyeMessage" class="goodbye-overlay">
+    <div class="goodbye-content">
+        <div class="goodbye-message">Come Back Soon</div>
+        <button class="btn cancel-btn" (click)="cancelLogout()">
+            <span class="timer-text">{{ logoutTimer.toFixed(1) }}s</span>
+            <span class="cancel-text">Cancel Logout</span>
+            <span class="progress-fill" [style.width.%]="(logoutTimer/3)*100"></span>
+        </button>
+    </div>
 </div>

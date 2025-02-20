@@ -3,22 +3,21 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     height: 5vw;
-    /* background-color: rgb(246, 140, 74); */
-    /* border: 1px solid black; */
+    background: linear-gradient(145deg, #fff3e6 0%, #ffe9d6 100%);
+    box-shadow: 0 0.2vw 1vw rgba(0,0,0,0.1);
 }
 .bar-1{
     justify-content: center;
     align-items: center;
 }
 .logo{
-    /* border: 1px solid black; */
     width: 10vw;
     height: 5vw;
     background-image: url('../Images/aari-lg.png');
     background-repeat: no-repeat;
-    background-size: contain;
     background-size: 12vw;
     background-position: -2vw -0.5vw;
+    filter: drop-shadow(0.2vw 0.2vw 0.5vw rgba(255, 120, 0, 0.2));
 }
 button:focus {
     outline: none;
@@ -26,19 +25,29 @@ button:focus {
 }
 .primary{
     border-color: transparent;
-    border-radius:0vw;
-    text-align: center;
-    /* color: rgb(255, 255, 255); */
-    font-size: 1.5vw;
+    border-radius: 0.3vw;
+    font-size: 1.2rem;
     width: 9.5vw;
     height: 4vw;
     transition: all 0.2s ease;
+    background: linear-gradient(to bottom, #ffffff 0%, #fff5e6 100%);
+    box-shadow: 0 0.2vw 0.5vw rgba(0,0,0,0.1);
+    color: #ff6a00;
+    margin-right: 1vw;
 }
 
+.primary:last-child {
+    margin-right: 0;
+}
+
+.primary:hover {
+    transform: translateY(-0.1vw);
+    box-shadow: 0 0.4vw 0.8vw rgba(255, 106, 0, 0.2);
+}
 
 .primary.active{
-    background-color: rgb(255, 77, 0);
-    box-shadow: 0.1vw 0.1vw 0.5vw rgb(240, 121, 35) ;
+    background: linear-gradient(to bottom, #ff5500 0%, #ff6a00 100%);
+    box-shadow: 0 0.3vw 0.8vw rgba(255, 106, 0, 0.3);
     color: white;
 }
 
@@ -48,7 +57,6 @@ button:focus {
     justify-content: center;
     align-items: center;
     width: 30vw;
-    /* border: 1px solid black; */
 }
 input{
     outline: none;
@@ -59,28 +67,29 @@ input:focus{
 .search-bar{
     width: 70vw;
     height: 4vw;
-    /* border-radius: 1.5vw 0vw 0vw 1.5vw; */
-    border: 1px solid orange;
-    background-color: white;
-    text-align: center;
-    margin-right: 0.5vw;
-    text-align: left;
+    border: 0.15vw solid #ffd1b3;
+    border-radius: 0.5vw;
     padding-left: 1vw;
-    font-size: 1.3vw;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
 }
 
-button:focus{
-    outline:none;
+.search-bar:focus {
+    border-color: #ff6a00;
+    box-shadow: 0 0 0.8vw rgba(255, 106, 0, 0.2);
 }
+
 .search-btn{
     height: 4vw;
-    border-radius: 0vw;
-    font-size: 1w;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border-radius: 0.5vw;
+    font-size: 1.1rem;
+    background: linear-gradient(to bottom, #ff6a00 0%, #ff5500 100%);
     color: white;
-    background-color: rgb(255, 123, 0);
-    border-color: orange;
-    margin-right: 1vw;
+    padding: 0 1.5vw;
+    transition: all 0.2s ease;
+}
+
+.search-btn:hover {
+    transform: translateY(-0.1vw);
+    box-shadow: 0 0.3vw 0.8vw rgba(255, 106, 0, 0.3);
 }

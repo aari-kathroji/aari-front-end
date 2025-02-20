@@ -2,7 +2,7 @@
     <div class="logo" routerLink="/home" (click)="buttonClicked(1)"></div>
     <div class="search">
         <input type="search" name="for-search" id="" title="for-search" class="search-bar" placeholder="Search here">
-        <button class="btn search-btn">search</button>
+        <button class="btn search-btn">Search</button>
     </div>
     <button class="btn primary" routerLink="/home" (click)="buttonClicked(1)" [ngClass]="{'active' : actived === 1 }">Home</button>
     <button class="btn primary" routerLink="/course" (click)="buttonClicked(2)" [ngClass]="{'active' : actived === 2 }">Courses</button>
@@ -11,4 +11,3 @@
     <button class="btn primary" routerLink="/about" (click)="buttonClicked(5)" [ngClass]="{'active' : actived === 5 }">About</button>
     <button class="btn primary" routerLink="/contact" (click)="buttonClicked(6)" [ngClass]="{'active' : actived === 6 }">Contact</button>
 </div>
-
