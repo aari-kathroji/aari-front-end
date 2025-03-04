@@ -17,6 +17,7 @@ export class AdminViewStudentsComponent {
   ngOnInit(){
     this.userService.getStudents().subscribe((data: any) => {
       this.students = data;
+      console.log(this.students);
     })
   }
   deleteStudent(id: any){

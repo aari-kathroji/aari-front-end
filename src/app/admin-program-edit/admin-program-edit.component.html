@@ -1,0 +1,66 @@
+<button class="back-btn" routerLink="/admin-program">
+    <i class="fas fa-arrow-left"></i> Back to Programs
+  </button>
+<form action="" [formGroup]="programForm" class="program-form">
+    <div class="form-container">
+        <h2 class="form-title">Program Registration</h2>
+        
+        <div class="form-group">
+            <label for="program_name" class="input-label">Program Name</label>
+            <input type="text" id="program_name" 
+                   class="form-input" 
+                   placeholder="Enter program name"
+                   formControlName="program_name">
+        </div>
+
+        <div class="form-group">
+            <label for="program_description" class="input-label">Description</label>
+            <textarea id="program_description" 
+                      class="form-input textarea" 
+                      placeholder="Program description"
+                      formControlName="program_description"></textarea>
+        </div>
+
+        <div class="form-group checkbox-group">
+            <h3 class="section-title">Technologies</h3>
+            <div class="checkbox-grid">
+                <div *ngFor="let tech of techs" class="checkbox-item">
+                    <input type="checkbox" 
+                           id="{{tech.course_id}}" 
+                           [value]="tech.course_id" 
+                           [checked]="programForm.get('tech_id')?.value.includes(tech.course_id)"
+                           (change)="onCheckboxChange($event)"
+                           class="tech-checkbox">
+                    <label for="{{tech.course_id}}" class="checkbox-label">{{tech.name}}</label>
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="staff" class="input-label">Assign Staff</label>
+                <select name="staff" id="staff" 
+                        class="form-select"
+                        formControlName="staff_id">
+                    <option value="" selected hidden disabled>Select staff member</option>
+                    <option *ngFor="let staff of staffs" 
+                            value="{{staff._id}}">{{staff.name}}</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="batch" class="input-label">Select Batch</label>
+                <select name="batch" id="batch" 
+                        class="form-select"
+                        formControlName="batch_id">
+                    <option value="" selected hidden disabled>Select batch</option>
+                    <option *ngFor="let batch of batches" 
+                            value="{{batch._id}}">{{batch.batch_name}}</option>
+                </select>
+            </div>
+        </div>
+
+        <button type="submit" 
+                class="submit-btn"
+                (click)="update()">Update Program</button>
+    </div>
+</form>

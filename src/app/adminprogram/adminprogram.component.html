@@ -1,23 +1,46 @@
-<form action="" [formGroup]="programForm">
-    <input type="text" id="course_name" placeholder="Enter the course name" formControlName="course_name">
-    <label for="course_name"></label><br>
-    <div *ngFor="let tech of techs">
-        <input type="checkbox" id="{{tech._id}}" [value]="tech._id" (change)="onCheckboxChange($event)">
-        <label for="{{tech._id}}">{{tech.name}}</label><br>
+<div class="admin-program-container">
+  <div class="header-section">
+    <h1 class="section-title">Program Management</h1>
+    <button class="add-program-btn" routerLink="/admin-program-register">
+      <i class="fas fa-plus-circle"></i> Add New Program
+    </button>
+  </div>
+
+  <div class="program-grid">
+    <div class="program-card" *ngFor="let program of programForm">
+      <div class="card-content">
+        <div class="card-header">
+          <h2 class="program-name">{{ program.program_name }}</h2>
+          <div class="program-meta">
+            <span class="batch-tag">
+              <i class="fas fa-users"></i> Batch {{program.batch}}
+            </span>
+          </div>
+        </div>
+        
+        <p class="program-description">{{ program.program_description }}</p>
+        
+        <div class="tech-stack">
+          <i class="fas fa-code"></i>
+          <span class="tech-tags">{{program.techs}}</span>
+        </div>
+        
+        <div class="staff-info">
+          <i class="fas fa-chalkboard-teacher"></i>
+          <span>{{program.staff}}</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <button class="action-btn view" [routerLink]="['/admin-program-view', program.program_id]">
+          <i class="fas fa-eye"></i>
+        </button>
+        <button class="action-btn edit" [routerLink]="['/admin-program-edit', program.program_id]">
+          <i class="fas fa-pencil-alt"></i>
+        </button>
+        <button class="action-btn delete" (click)="deleteProgram(program.program_id)">
+          <i class="fas fa-trash-alt"></i>
+        </button>
+      </div>
     </div>
-    <label for="staff">Choose the staff</label><br>
-    <select name="staff" id="staff" formControlName="staff_id">
-        <option value="" selected hidden disabled></option>
-        <option *ngFor="let batch of batches" value="{{batch._id}}">{{batch.batch_name}}</option>
-    </select><br>
-    <label for="batch">Choose the batch</label><br>
-    <select name="batch" id="batch" formControlName="batch_id">
-        <option value="Choose the Batch" selected hidden disabled></option>
-        <option *ngFor="let batch of batches" value="{{batch._id}}">{{batch.batch_name}}</option>
-    </select><br>
-    <button type="submit" (click)="submit()">Submit</button>
-</form>
-
-
-
-<!-- <button (click)="gettech()">Click</button> -->
+  </div>
+</div>

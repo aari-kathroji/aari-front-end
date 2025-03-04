@@ -1,0 +1,37 @@
+<div class="program-detail-container">
+  <button class="back-btn" routerLink="/admin-program">
+    <i class="fas fa-arrow-left"></i> Back to Programs
+  </button>
+  
+  <div class="program-card">
+    <div class="program-header">
+      <h1 class="program-title">{{ programDetails?.program_name }}</h1>
+      <div class="program-meta">
+        <div class="meta-item">
+          <i class="fas fa-users meta-icon"></i>
+          <span class="meta-text">{{ programDetails?.batch }}</span>
+        </div>
+        <div class="meta-item">
+          <i class="fas fa-chalkboard-teacher meta-icon"></i>
+          <span class="meta-text">{{ programDetails?.staff }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="program-content">
+      <section class="content-section">
+        <h2 class="section-title">Program Overview</h2>
+        <p class="program-description">{{ programDetails?.program_description }}</p>
+      </section>
+
+      <section class="tech-section">
+        <h2 class="section-title">Core Technologies</h2>
+        <div class="tech-grid">
+          <div class="tech-pill" *ngFor="let tech of programDetails?.techs">
+            {{ tech }}
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>

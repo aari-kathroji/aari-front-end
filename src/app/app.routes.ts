@@ -19,6 +19,9 @@ import { EditInfoComponent } from './edit-info/edit-info.component';
 import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './auth.guard';
 import { BatchStudentsComponent } from './batch-students/batch-students.component';
+import { AdminprogramregisterComponent } from './adminprogramregister/adminprogramregister.component';
+import { AdminProgramViewComponent } from './admin-program-view/admin-program-view.component';
+import { AdminProgramEditComponent } from './admin-program-edit/admin-program-edit.component';
 
 export const routes: Routes = [
     {
@@ -84,6 +87,15 @@ export const routes: Routes = [
     },
     {
         path: 'edit/:_id',component: EditInfoComponent
+    },
+    {
+        path:'admin-program-register',component:AdminprogramregisterComponent
+    },
+    {
+        path:'admin-program-view/:_id',component:AdminProgramViewComponent
+    },
+    {
+        path:'admin-program-edit/:_id',component:AdminProgramEditComponent
     },
     
 
