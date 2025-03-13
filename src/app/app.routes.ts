@@ -31,7 +31,7 @@ export const routes: Routes = [
 
     },
     {
-        // path : 'home', component : HomeComponent, canActivate : [AuthGuard]
+        //path : 'home', component : HomeComponent, canActivate : [AuthGuard]
         path : 'home', component : HomeComponent
     },
     {
@@ -68,7 +68,7 @@ export const routes: Routes = [
         path :'student-program', component : StudentprogramComponent
     },
     {
-        path :'admin-program', component : AdminprogramComponent
+        path :'admin-program', component : AdminprogramComponent, canActivate : [AuthGuard]
     },
     {
         path : 'admin-batch', component : AdminbatchComponent

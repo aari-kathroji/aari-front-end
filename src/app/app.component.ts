@@ -60,7 +60,7 @@ export class AppComponent {
             document.getElementById('nav-2')?.classList.remove('hidden');
             document.getElementById('nav-3')?.classList.add('hidden');
           }
-          else if(this.role === "1" || this.role === "2"){
+          else if(this.role === "1"){
             document.getElementById('nav-1')?.classList.add('hidden');
             document.getElementById('nav-2')?.classList.add('hidden');
             document.getElementById('nav-3')?.classList.remove('hidden');

@@ -49,7 +49,7 @@ export class NavadminComponent {
       if (payload && 'role' in payload) {
         this.role = payload.role;
       }
-      if (this.role === '1' || this.role === '2') {
+      if (this.role === '1') {
         document.cookie = 'accessToken=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
         document.cookie = 'refreshToken=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
         document.cookie = 'role=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
